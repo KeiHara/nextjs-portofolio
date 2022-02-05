@@ -14,9 +14,9 @@ interface Props {
 const SideBar: NextPage = () => {
   return (
     <div className="top-0 left-0 h-screen m-0 flex flex-col bg-gray-900 text-white shadow-lg w-20 sticky">
-      <Link href="/about"><a><SideBarIcon icon={props => <BiUserCircle size={28}/>} text="about me 😊"/></a></Link>
+      <Link href="/"><a><SideBarIcon icon={props => <BiUserCircle size={28}/>} text="about me 😊"/></a></Link>
       <hr className={styles.hr}/>
-      <SideBarIcon icon={props => <FaFire size={28}/>}/> 
+      <Link href="/about"><a><SideBarIcon icon={props => <FaFire size={28}/>}/></a></Link>
       <SideBarIcon icon={props => <FaFire size={28}/>}/> 
       <SideBarIcon icon={props => <FaFire size={28}/>}/> 
     </div>
