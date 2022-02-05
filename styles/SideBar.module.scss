@@ -1,0 +1,23 @@
+
+.icon {
+  @apply relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto bg-gray-800 hover:bg-blue-500 rounded-3xl hover:rounded-xl transition-all duration-200 ease-linear;  
+
+  .tooltip {
+    @apply flex items-center absolute p-2 m-4 min-w-max left-14 rounded-md shadow-md bg-gray-900 text-sm font-bold transition-all duration-100 scale-0 origin-left;
+  }
+
+  .triangle {
+    @apply absolute w-2 left-[-7px] overflow-hidden inline-block;
+    
+    div {
+      @apply h-3 bg-gray-900 -rotate-45 transform origin-top-right;
+    }
+  }
+
+  .state {
+    @apply fixed h-2 w-2 rounded-full bg-white left-[-4px] transition-all duration-300 scale-0 origin-left
+  }
+}
+.hr {
+    @apply bg-gray-800 border border-gray-800 rounded-full mx-5
+}
