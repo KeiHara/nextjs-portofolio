@@ -5,7 +5,7 @@ import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
 import Link from 'next/link';
 
-interface Props {
+interface SideBarIconProps {
   icon: IconType;
   text?: string;
 }
@@ -79,7 +79,7 @@ const SideBar: NextPage = () => {
   );
 };
 
-const SideBarIcon = ({ icon, text = 'tooltip 😀' }: Props) => (
+const SideBarIcon = ({ icon, text = 'tooltip 😀' }: SideBarIconProps) => (
   <div className="group relative mx-auto mt-2 mb-2 flex h-12 w-12 items-center justify-center rounded-3xl bg-neutral-100 shadow-md duration-200 ease-linear  hover:rounded-xl hover:bg-sky-300 dark:bg-zinc-700 hover:dark:bg-teal-300">
     <div className="fixed left-[-4px] h-2 w-2 origin-left scale-0 rounded-full bg-sky-300 duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-teal-300"></div>
     {createElement(icon)}
