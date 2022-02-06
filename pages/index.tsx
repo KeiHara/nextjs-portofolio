@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             as a Frontend engineer / Research assistant at the University
             Auckland helping research project called&nbsp;
             <a
-              className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-600 transition-all duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-600 after:duration-200 hover:text-sky-500 hover:after:scale-100  hover:after:bg-sky-500 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+              className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 transition-all duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://habits-uat.xyz/"
               target="_blank">
               Habits
@@ -49,10 +49,33 @@ const Home: NextPage = () => {
             Bio
           </h3>
           <div>
-            <p className=" dark:text-white">
-              <span className="mr-3 font-bold"> 2003</span>
+            <p className="mb-1 dark:text-white">
+              <span className="mr-3 font-bold">2003</span>
               Born in Tokyo(東京), Japan.
             </p>
+            <p className="mb-1 dark:text-white">
+              <span className="mr-3 font-bold">2021</span>
+              Accepted into the University of Auckland studying computer science
+            </p>
+            <p className="mb-1 dark:text-white">
+              <span className="mr-3 font-bold">2021 to present</span>
+              Working as a frontend(Angular) engineer at Kekeno Tech
+            </p>
+            <div className="mb-1 flex">
+              <p className="mr-3 whitespace-nowrap font-bold dark:text-white">
+                2021 to present
+              </p>
+              <p className="dark:text-white">
+                Working as a front(Angular) engineer at university of auckland
+                helping research project called&nbsp;
+                <a
+                  className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 transition-all duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+                  href="https://habits-uat.xyz/"
+                  target="_blank">
+                  Habits
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
