@@ -1,4 +1,3 @@
-import { NextPage } from 'next';
 import React, { createElement, useEffect, useState } from 'react';
 import { FaFire } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
@@ -10,7 +9,7 @@ interface SideBarIconProps {
   text?: string;
 }
 
-const SideBar: NextPage = () => {
+const SideBar = () => {
   const [isDark, setIsDark] = useState(false);
   useEffect(() => {
     if (
@@ -25,8 +24,6 @@ const SideBar: NextPage = () => {
       document.documentElement.classList.remove('dark');
       localStorage.theme = 'light';
     }
-
-    console.log(localStorage.theme);
   }, []);
 
   const toggleTheme = (): void => {
@@ -52,7 +49,7 @@ const SideBar: NextPage = () => {
         </a>
       </Link>
       <hr className="mx-5 rounded-full border border-gray-100 bg-gray-100 dark:border-zinc-700 dark:bg-zinc-700" />
-      <Link href="/about">
+      <Link href="/works">
         <a>
           <SideBarIcon icon={(props) => <FaFire size={28} />} />
         </a>
