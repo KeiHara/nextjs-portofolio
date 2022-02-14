@@ -1,18 +1,21 @@
-import SideBar from "./SideBar";
-
+import SideBar from './SideBar';
+import Model from './Model';
 interface props {
-  children: JSX.Element
+  children: JSX.Element;
 }
 
-const Layout = ({children}: props) => {
+const Layout = ({ children }: props) => {
   return (
-    <div className="flex">
+    <div className="flex bg-neutral-300 dark:bg-zinc-900">
       <SideBar />
       <div className="w-full">
+        <div className="flex justify-center">
+          <Model />
+        </div>
         {children}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
