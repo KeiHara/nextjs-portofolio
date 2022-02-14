@@ -67,7 +67,7 @@ const Home: NextPage = () => {
           </p>
           <p className="mb-1 dark:text-white">
             <span className="mr-3 font-bold">2021</span>
-            Accepted into the University of Auckland studying computer science
+            Started studying Computer Science at University of Auckland
           </p>
           <p className="mb-1 dark:text-white">
             <span className="mr-3 font-bold">2021 to present</span>
