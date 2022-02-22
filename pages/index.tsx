@@ -6,7 +6,7 @@ import { createElement } from 'react';
 
 const Home: NextPage = () => {
   return (
-    <div className="max-w-xl">
+    <div className="sm:w-lg max-w-xs xl:max-w-xl">
       {/* Intro */}
       <div className="flex pt-4">
         <div>

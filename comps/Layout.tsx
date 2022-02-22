@@ -1,14 +1,16 @@
 import SideBar from './SideBar';
 import Model from './Model';
+import TopNav from './TopNav';
 interface props {
   children: JSX.Element;
 }
 
 const Layout = ({ children }: props) => {
   return (
-    <div className="flex bg-neutral-300 dark:bg-zinc-900">
+    <div>
       <SideBar />
-      <div className="w-full">
+      <div className="float-right min-h-screen w-[calc(100vw-5rem)] bg-neutral-300 dark:bg-zinc-900">
+        <TopNav />
         <div className="flex justify-center">
           <Model />
         </div>

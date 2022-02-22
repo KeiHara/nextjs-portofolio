@@ -21,20 +21,18 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 const Model = () => {
   useEffect(() => {
     const containerRef = document.querySelector('.model-container')!;
+    console.log(containerRef.clientHeight);
     const scene = new Scene();
-    const camera = new PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.01,
-      1000
-    );
+    const camera = new PerspectiveCamera(75, 1.5, 0.01, 1000);
     const renderer = new WebGLRenderer({
       canvas: containerRef,
       antialias: true,
       alpha: true,
     });
     renderer.setPixelRatio(window.devicePixelRatio);
+    console.log(containerRef.clientWidth);
     renderer.setSize(containerRef.clientWidth, containerRef.clientHeight);
+    camera.aspect = containerRef.clientWidth / containerRef.clientHeight;
     camera.position.set(0, 5, 15);
     camera.lookAt(0, 0, 0);
     const loader = new GLTFLoader();
@@ -70,9 +68,7 @@ const Model = () => {
     animate();
   }, []);
 
-  return (
-    <canvas className="model-container mt-5 h-[337.5px] w-[600px]"></canvas>
-  );
+  return <canvas className="model-container mt-5 h-44 w-72 "></canvas>;
 };
 
 export default Model;

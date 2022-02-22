@@ -39,7 +39,7 @@ const SideBar = () => {
   };
 
   return (
-    <div className="sticky top-0 left-0 m-0 flex h-screen w-20 flex-col bg-neutral-200 py-2 shadow-lg dark:bg-zinc-800 dark:text-white">
+    <div className="fixed top-0 left-0 z-10 m-0 flex h-screen w-20 flex-col bg-neutral-200 py-2 shadow-lg dark:bg-zinc-800 dark:text-white">
       <Link href="/">
         <a>
           <SideBarIcon
