@@ -1,6 +1,8 @@
 import SideBar from './SideBar';
 import Model from './Model';
 import TopNav from './TopNav';
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 interface props {
   children: JSX.Element;
 }

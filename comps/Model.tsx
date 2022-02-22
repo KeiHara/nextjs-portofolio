@@ -1,18 +1,8 @@
 import { useEffect } from 'react';
 import {
   AmbientLight,
-  AxesHelper,
-  BoxGeometry,
-  Color,
-  DirectionalLight,
-  DirectionalLightHelper,
   Group,
-  HemisphereLight,
-  Mesh,
-  MeshBasicMaterial,
   PerspectiveCamera,
-  PointLight,
-  PointLightHelper,
   Scene,
   WebGLRenderer,
 } from 'three';
@@ -30,7 +20,6 @@ const Model = () => {
       alpha: true,
     });
     renderer.setPixelRatio(window.devicePixelRatio);
-    console.log(containerRef.clientWidth);
     renderer.setSize(containerRef.clientWidth, containerRef.clientHeight);
     camera.aspect = containerRef.clientWidth / containerRef.clientHeight;
     camera.position.set(0, 5, 15);
@@ -68,7 +57,7 @@ const Model = () => {
     animate();
   }, []);
 
-  return <canvas className="model-container mt-5 h-44 w-72 "></canvas>;
+  return <canvas className="model-container mt-16 h-44 w-72 "></canvas>;
 };
 
 export default Model;
