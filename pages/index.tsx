@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import profile from '../public/profile_pic.jpg';
-import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { createElement } from 'react';
 
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <h3 className="mb-2 w-fit text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
-        <p className="text-justify indent-4 dark:text-white">
+        <p className="text-justify tracking-wide dark:text-white">
           Keisuke is a second-year student studying a Bachelor of Science at the
           University of Auckland, majoring in Computer Science. He is passionate
           about taking on opportunities to actively improve my web development
@@ -60,34 +60,31 @@ const Home: NextPage = () => {
         <h3 className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Bio
         </h3>
-        <div>
-          <p className="mb-1 dark:text-white">
-            <span className="mr-3 font-bold">2003</span>
-            Born in Tokyo(東京), Japan.
-          </p>
-          <p className="mb-1 dark:text-white">
-            <span className="mr-3 font-bold">2021</span>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="font-bold dark:text-white">2003</div>
+          <p className="dark:text-white">Born in Tokyo(東京), Japan.</p>
+
+          <div className="font-bold dark:text-white">2001</div>
+          <p className="dark:text-white">
             Started studying Computer Science at University of Auckland
           </p>
-          <p className="mb-1 dark:text-white">
-            <span className="mr-3 font-bold">2021 to present</span>
+
+          <div className="font-bold dark:text-white">2021 to present</div>
+          <p className="dark:text-white">
             Working as a frontend(Angular) engineer at Kekeno Tech
           </p>
-          <div className="mb-1 flex">
-            <p className="mr-3 whitespace-nowrap font-bold dark:text-white">
-              2021 to present
-            </p>
-            <p className="dark:text-white">
-              Working as a front(Angular) engineer at university of auckland
-              helping research project called&nbsp;
-              <a
-                className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
-                href="https://habits-uat.xyz/"
-                target="_blank">
-                Habits
-              </a>
-            </p>
-          </div>
+
+          <div className="font-bold dark:text-white">2021 to present</div>
+          <p className="dark:text-white">
+            Working as a front(Angular) engineer at university of auckland
+            helping research project called&nbsp;
+            <a
+              className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+              href="https://habits-uat.xyz/"
+              target="_blank">
+              Habits
+            </a>
+          </p>
         </div>
       </div>
       {/* Hobbies */}
@@ -104,14 +101,14 @@ const Home: NextPage = () => {
         </h3>
         <div className="flex flex-col">
           <MediaLink
-            icon={(props) => <FaInstagram />}
-            text="@kei.9241"
-            mediaLink="https://www.instagram.com/kei.9241/"
-          />
-          <MediaLink
             icon={(props) => <FaLinkedin />}
             text="@keisuke-hara"
             mediaLink="https://www.linkedin.com/in/keisuke-hara/"
+          />
+          <MediaLink
+            icon={(props) => <FaGithub />}
+            text="keiHara"
+            mediaLink="https://github.com/KeiHara"
           />
           <MediaLink
             icon={(props) => <FaLinkedin />}
