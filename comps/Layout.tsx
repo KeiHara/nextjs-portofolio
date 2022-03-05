@@ -16,7 +16,9 @@ const Layout = ({ children }: props) => {
   };
 
   useEffect(() => {
-    window.innerWidth < 640 && setIsMobile(true);
+    window.addEventListener('resize', () => {
+      window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+    });
   });
 
   return (
