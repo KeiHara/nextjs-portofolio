@@ -3,10 +3,14 @@ import profile from '../public/profile_pic.jpg';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { createElement } from 'react';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
     <div className="sm:max-w-xl xl:max-w-2xl">
+      <Head>
+        <title>About me</title>
+      </Head>
       <div className="m-4 sm:m-auto">
         {/* Intro */}
         <div className="flex justify-between pt-4">
@@ -65,7 +69,7 @@ const Home: NextPage = () => {
             <div className="font-bold dark:text-white">2003</div>
             <p className="dark:text-white">Born in Tokyo(東京), Japan.</p>
 
-            <div className="font-bold dark:text-white">2001</div>
+            <div className="font-bold dark:text-white">2021</div>
             <p className="dark:text-white">
               Started studying Computer Science at University of Auckland
             </p>
@@ -78,7 +82,7 @@ const Home: NextPage = () => {
             <div className="font-bold dark:text-white">2021 to present</div>
             <p className="dark:text-white">
               Working as a front(Angular) engineer at university of auckland
-              helping research project called&nbsp;
+              helping a research project called&nbsp;
               <a
                 className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
                 href="https://habits-uat.xyz/"

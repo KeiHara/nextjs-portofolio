@@ -2,6 +2,7 @@ import React, { createElement, useEffect, useState } from 'react';
 import { FaFire } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
+import { MdWorkOutline } from 'react-icons/md';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -63,7 +64,7 @@ const SideBar = () => {
         <a>
           <SideBarIcon
             icon={(props) => <BiUserCircle size={28} />}
-            text="about me 😊"
+            text="About me 😊"
             toggled={toggledSideBarIcon[0]}
           />
         </a>
@@ -72,8 +73,9 @@ const SideBar = () => {
       <Link href="/works">
         <a>
           <SideBarIcon
-            icon={(props) => <FaFire size={28} />}
+            icon={(props) => <MdWorkOutline size={28} />}
             toggled={toggledSideBarIcon[1]}
+            text="My works 🔥"
           />
         </a>
       </Link>
