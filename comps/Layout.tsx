@@ -42,7 +42,7 @@ const Layout = ({ children }: props) => {
             }}
             open={open}>
             <div className="visible absolute right-[-16px] flex h-full w-[16px] items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
-              <div className="position absolute  h-36 w-2 rounded-md dark:bg-zinc-800"></div>
+              <div className="position absolute  h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
             </div>
             <SideBar />
           </SwipeableDrawer>
