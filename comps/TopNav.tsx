@@ -2,17 +2,20 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 const TopNav = () => {
-  const [pageTitle, setPageTitle] = useState('about me 😊');
+  const [pageTitle, setPageTitle] = useState();
   const router = useRouter();
   useEffect(() => {
+    console.log(router.asPath);
     switch (router.asPath) {
       case '/':
         setPageTitle('about me 😊');
+        break;
       case '/works':
         setPageTitle('My Works 🔥');
+        break;
     }
     console.log(pageTitle);
-  }, [router.asPath]);
+  }, [router.pathname]);
 
   return (
     <div
