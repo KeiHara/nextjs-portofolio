@@ -6,9 +6,9 @@ import { createElement } from 'react';
 
 const Home: NextPage = () => {
   return (
-    <div className="sm:w-lg max-w-xs xl:max-w-xl">
+    <div className="sm:max-w-xl xl:max-w-2xl">
       {/* Intro */}
-      <div className="flex pt-4">
+      <div className="flex justify-between pt-4">
         <div>
           <h1 className="text-4xl font-bold text-black dark:text-white">
             Keisuke Hara
@@ -18,11 +18,11 @@ const Home: NextPage = () => {
           </p>
         </div>
         {/* prof pic */}
-        <div className="ml-10 overflow-hidden rounded-full border-2">
+        <div className="flex h-24 w-24 overflow-hidden rounded-full border-2">
           <a target="_blank" href="https://www.linkedin.com/in/keisuke-hara/">
             <div className="group flex items-center justify-center">
               <img
-                className="w-24 duration-200 ease-linear group-hover:blur-sm"
+                className="rounded-full duration-200 ease-linear group-hover:blur-sm"
                 src={profile.src}
                 alt="prof-pic"
               />
@@ -107,13 +107,13 @@ const Home: NextPage = () => {
           />
           <MediaLink
             icon={(props) => <FaGithub />}
-            text="keiHara"
+            text="@keiHara"
             mediaLink="https://github.com/KeiHara"
           />
           <MediaLink
-            icon={(props) => <FaLinkedin />}
-            text="@keisuke-hara"
-            mediaLink="https://www.linkedin.com/in/keisuke-hara/"
+            icon={(props) => <FaInstagram />}
+            text="@kei.9241"
+            mediaLink="https://www.instagram.com/kei.9241/"
           />
         </div>
       </div>
