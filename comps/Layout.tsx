@@ -53,7 +53,7 @@ const Layout = ({ children }: props) => {
 
       <div className="float-right min-h-screen w-[calc(100vw-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-[calc(100vw-5rem)]">
         <TopNav />
-        <div className="flex justify-center">
+        <div className="m-2 flex justify-center">
           <Model />
         </div>
         {children}
