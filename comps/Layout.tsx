@@ -23,7 +23,7 @@ const Layout = ({ children }: props) => {
   });
 
   return (
-    <div>
+    <div className="w-screen">
       {isMobile ? (
         <div>
           <Global
