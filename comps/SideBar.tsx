@@ -109,8 +109,8 @@ const SideBarIcon = ({
   return (
     <div
       className={`${
-        toggled && 'rounded-xl bg-sky-300  dark:bg-teal-300'
-      } group relative mx-auto mt-2 mb-2 flex h-12 w-12 items-center justify-center rounded-3xl bg-neutral-100 shadow-md duration-200 ease-linear   hover:rounded-xl hover:bg-sky-300 dark:bg-zinc-700 hover:dark:bg-teal-300`}>
+        toggled && 'rounded-xl bg-sky-300 dark:bg-teal-300'
+      } group relative mx-auto mt-2 mb-2 flex h-12 w-12 items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl hover:bg-sky-300 dark:bg-zinc-700 hover:dark:bg-teal-300`}>
       <div
         className={`${
           toggled && 'left-0 h-5 scale-100'
