@@ -54,7 +54,7 @@ const Layout = ({ children }: props) => {
         <SideBar />
       )}
 
-      <div className="float-right min-h-screen w-[calc(100vw-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-[calc(100vw-96px)]">
+      <div className="float-right min-h-screen w-[calc(100vw-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-[calc(100vw-80px)]">
         <TopNav />
         <div className="m-2 flex justify-center">
           <Model />
