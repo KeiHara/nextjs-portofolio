@@ -19,7 +19,7 @@ const TopNav = () => {
 
   return (
     <div
-      className="bg-neutral fixed flex h-16 w-full bg-neutral-200 shadow-lg dark:bg-zinc-800 dark:text-white
+      className="bg-neutral fixed top-0 flex h-16 w-full bg-neutral-200/50 shadow-lg backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
   ">
       <h1 className="my-auto ml-[16px] text-4xl font-bold text-black dark:text-white">
         {pageTitle}

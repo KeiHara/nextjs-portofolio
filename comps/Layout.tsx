@@ -54,12 +54,14 @@ const Layout = ({ children }: props) => {
         <SideBar />
       )}
 
-      <div className="float-right min-h-screen w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-[calc(100%-80px)]">
-        <TopNav />
-        <div className="m-2 flex justify-center">
-          <Model />
+      <div className="float-right min-h-screen w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-full">
+        <div className="sm:ml-[80px]">
+          <TopNav />
+          <div className="m-2 flex justify-center">
+            <Model />
+          </div>
+          {children}
         </div>
-        {children}
       </div>
     </div>
   );
