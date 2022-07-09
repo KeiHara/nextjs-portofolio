@@ -1,15 +1,20 @@
 [
   {
-    "href": "https://habits.school/",
-    "imgSrc": "work_imgs/taskerr.png",
-    "title": "Habits",
-    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
-  },
-  {
+    "imgSrcs": [
+      "work_imgs/headstrong1.png",
+      "work_imgs/headstrong2.png",
+      "work_imgs/headstrong3.png"
+    ],
     "href": "https://play.google.com/store/apps/details?id=nz.co.uniservices.habitsmessenger",
-    "imgSrc": "work_imgs/taskerr.png",
+    "imgSrc": "",
     "title": "Headstrong",
     "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
+  },
+  {
+    "href": "https://habits.school/",
+    "imgSrc": "work_imgs/habits.png",
+    "title": "Habits",
+    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
   },
   {
     "href": "#",

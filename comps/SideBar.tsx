@@ -79,8 +79,6 @@ const SideBar = () => {
           />
         </a>
       </Link>
-      <SideBarIcon icon={(props) => <FaFire size={28} />} />
-      <SideBarIcon icon={(props) => <FaFire size={28} />} />
       <div
         onClick={() => toggleTheme()}
         className={`group relative mx-auto mt-auto mb-2 flex h-12 w-12 items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl ${

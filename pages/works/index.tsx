@@ -49,7 +49,10 @@ const WorkCard = ({
     <div>
       <div>
         <a target="_blank" href={href}>
-          <div className="flex h-36 justify-around">
+          <div
+            className={`flex h-36 ${
+              imgSrcs ? 'justify-between' : 'justify-center'
+            }`}>
             {imgSrcs ? (
               imgSrcs.map((src) => (
                 <img className="rounded-md" src={src} alt="img" />
