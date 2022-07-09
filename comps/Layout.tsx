@@ -1,12 +1,18 @@
 import SideBar from './SideBar';
-import Model from './Model';
 import TopNav from './TopNav';
 import { useEffect, useState } from 'react';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import { Global } from '@emotion/react';
+import dynamic from 'next/dynamic';
+import VoxelDogLoader from './voxel-dog-loader';
 interface props {
   children: JSX.Element;
 }
+
+const LazyVoxelDog = dynamic(() => import('./voxel-dog'), {
+  ssr: false,
+  loading: () => <VoxelDogLoader />,
+});
 
 const Layout = ({ children }: props) => {
   const [open, setOpen] = useState(false);
@@ -45,7 +51,7 @@ const Layout = ({ children }: props) => {
             }}
             open={open}>
             <div className="visible absolute right-[-16px] flex h-full w-[16px] items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
-              <div className="position absolute  h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
+              <div className="position absolute h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
             </div>
             <SideBar />
           </SwipeableDrawer>
@@ -57,10 +63,10 @@ const Layout = ({ children }: props) => {
       <div className="float-right min-h-screen w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-full">
         <div className="sm:ml-[80px]">
           <TopNav />
-          <div className="m-2 flex justify-center">
-            <Model />
+          <div className="mt-16 flex justify-center">
+            <LazyVoxelDog />
           </div>
-          {children}
+          <div className="relative">{children}</div>
         </div>
       </div>
     </div>
