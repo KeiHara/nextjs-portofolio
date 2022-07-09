@@ -5,7 +5,7 @@ const works = () => {
   const works = worksJson;
 
   return (
-    <div className="mt-4 flex max-w-sm justify-center sm:max-w-lg md:max-w-2xl">
+    <div className="mt-4 mb-4 flex max-w-sm justify-center sm:max-w-lg md:max-w-2xl">
       <div className="flex w-11/12 flex-col items-center">
         <Head>
           <title>My works</title>
@@ -17,6 +17,7 @@ const works = () => {
         <div className="grid justify-items-center gap-6 md:grid-cols-2">
           {works.map((work) => (
             <WorkCard
+              href={work.href}
               imgSrcs={work.imgSrcs}
               imgSrc={work.imgSrc}
               title={work.title}
@@ -37,11 +38,17 @@ interface workCardProps {
   description: string;
 }
 
-const WorkCard = ({ imgSrc, title, description, imgSrcs }: workCardProps) => {
+const WorkCard = ({
+  imgSrc,
+  title,
+  description,
+  imgSrcs,
+  href,
+}: workCardProps) => {
   return (
     <div>
       <div>
-        <a target="_blank" href="https://taskerr-c3026.web.app/">
+        <a target="_blank" href={href}>
           <div className="flex h-36 justify-around">
             {imgSrcs ? (
               imgSrcs.map((src) => (
