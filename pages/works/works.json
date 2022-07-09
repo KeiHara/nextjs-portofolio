@@ -1,0 +1,31 @@
+[
+  {
+    "href": "https://habits.school/",
+    "imgSrc": "work_imgs/taskerr.png",
+    "title": "Habits",
+    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
+  },
+  {
+    "href": "https://play.google.com/store/apps/details?id=nz.co.uniservices.habitsmessenger",
+    "imgSrc": "work_imgs/taskerr.png",
+    "title": "Headstrong",
+    "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
+  },
+  {
+    "href": "#",
+    "imgSrcs": [
+      "work_imgs/ida1.png",
+      "work_imgs/ida2.png",
+      "work_imgs/ida3.png"
+    ],
+    "imgSrc": "work_imgs/ida.png",
+    "title": "IDA",
+    "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
+  },
+  {
+    "href": "https://taskerr-c3026.web.app/",
+    "imgSrc": "work_imgs/taskerr.png",
+    "title": "Taskerr",
+    "description": "Task tracking platform aiming to solve the problem of procrastination."
+  }
+]
