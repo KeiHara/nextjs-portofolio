@@ -18,3 +18,17 @@ h4,
 h6 {
   font-family: 'Nunito', sans-serif;
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-neutral-300 dark:bg-zinc-900;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-neutral-400 transition delay-150 duration-300 dark:bg-zinc-700;
+  }
+}

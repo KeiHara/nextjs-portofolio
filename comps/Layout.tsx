@@ -60,8 +60,8 @@ const Layout = ({ children }: props) => {
         <SideBar />
       )}
 
-      <div className="float-right min-h-screen w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-full">
-        <div className="sm:ml-[80px]">
+      <div className="float-right w-[calc(100%-16px)]  bg-neutral-300 dark:bg-zinc-900 sm:w-full">
+        <div className="scrollbar h-screen overflow-auto sm:ml-[80px]">
           <TopNav />
           <div className="mt-16 flex justify-center">
             <LazyVoxelDog />
