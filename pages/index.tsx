@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <Head>
         <title>About me</title>
       </Head>
-      <div className="m-4 sm:m-auto">
+      <div className="m-4">
         {/* Intro */}
         <div className="flex justify-between pt-4">
           <div>

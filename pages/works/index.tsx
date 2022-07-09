@@ -5,7 +5,7 @@ const works = () => {
   const works = worksJson;
 
   return (
-    <div className="mt-4 mb-4 flex max-w-sm justify-center sm:max-w-lg md:max-w-2xl">
+    <div className="m-4 flex max-w-sm justify-center sm:max-w-lg md:max-w-2xl">
       <div className="flex w-11/12 flex-col items-center">
         <Head>
           <title>My works</title>
@@ -14,7 +14,7 @@ const works = () => {
         <h3 className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
-        <div className="grid justify-items-center gap-6 md:grid-cols-2">
+        <div className="grid justify-items-center gap-12 md:grid-cols-2 md:gap-6">
           {works.map((work) => (
             <WorkCard
               href={work.href}
