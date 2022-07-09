@@ -8,10 +8,10 @@ const TopNav = () => {
     console.log(router.asPath);
     switch (router.asPath) {
       case '/':
-        setPageTitle('About me 😊');
+        setPageTitle('About me');
         break;
       case '/works':
-        setPageTitle('My Works 🔥');
+        setPageTitle('My Works');
         break;
     }
     console.log(pageTitle);

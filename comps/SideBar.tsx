@@ -64,7 +64,7 @@ const SideBar = () => {
         <a>
           <SideBarIcon
             icon={(props) => <BiUserCircle size={28} />}
-            text="About me 😊"
+            text="About me"
             toggled={toggledSideBarIcon[0]}
           />
         </a>
@@ -75,7 +75,7 @@ const SideBar = () => {
           <SideBarIcon
             icon={(props) => <MdWorkOutline size={28} />}
             toggled={toggledSideBarIcon[1]}
-            text="My works 🔥"
+            text="My works"
           />
         </a>
       </Link>
