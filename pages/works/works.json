@@ -25,7 +25,13 @@
     ],
     "imgSrc": "work_imgs/ida.png",
     "title": "IDA",
-    "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
+    "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors."
+  },
+  {
+    "href": "https://www.tekaha.co.nz/",
+    "imgSrc": "work_imgs/tekaha.png",
+    "title": "Tekaha",
+    "description": "A platform for the Tekaha community to connect and socialize."
   },
   {
     "href": "https://taskerr-c3026.web.app/",
