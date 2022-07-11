@@ -40,7 +40,9 @@ const Layout = ({ children }: props) => {
               },
             }}
           />
-          <div onClick={toggleDrawer()} className="cursor-pointer">
+          <div
+            onClick={!open ? toggleDrawer() : undefined}
+            className="cursor-pointer">
             <SwipeableDrawer
               onOpen={toggleDrawer()}
               onClose={toggleDrawer()}
@@ -51,7 +53,7 @@ const Layout = ({ children }: props) => {
               }}
               open={open}>
               <div className="visible absolute right-[-16px] flex h-full w-[16px]  items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
-                <div className="position absolute h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
+                <div className="position absolute h-36 w-2 rounded-md bg-sky-500 dark:bg-teal-500"></div>
               </div>
               <SideBar />
             </SwipeableDrawer>
