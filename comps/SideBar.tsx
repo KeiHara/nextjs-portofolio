@@ -1,5 +1,5 @@
 import React, { createElement, useEffect, useState } from 'react';
-import { FaFire } from 'react-icons/fa';
+import { FaFire, FaGithub } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
 import { MdWorkOutline } from 'react-icons/md';
@@ -79,6 +79,13 @@ const SideBar = () => {
           />
         </a>
       </Link>
+      <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank">
+        <SideBarIcon
+          icon={(props) => <FaGithub size={28} />}
+          toggled={toggledSideBarIcon[2]}
+          text="Source"
+        />
+      </a>
       <div
         onClick={() => toggleTheme()}
         className={`group relative mx-auto mt-auto mb-2 flex h-12 w-12 items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl ${
