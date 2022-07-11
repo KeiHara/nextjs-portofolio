@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <div className="max-w-sm sm:max-w-lg md:max-w-2xl">
       <Head>
-        <title>About me</title>
+        <title>Keisuke Hara | About me</title>
       </Head>
       <div className="m-4">
         {/* Intro */}
