@@ -1,5 +1,5 @@
 import React, { createElement, useEffect, useState } from 'react';
-import { FaFire, FaGithub } from 'react-icons/fa';
+import { FaArrowLeft, FaArrowRight, FaFire, FaGithub } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
 import { MdWorkOutline } from 'react-icons/md';
@@ -46,6 +46,9 @@ const SideBar = () => {
     false,
     false,
   ]);
+
+  const [onLeft, setOnRight] = useState(true);
+
   const router = useRouter();
   useEffect(() => {
     switch (router.asPath) {
@@ -59,7 +62,12 @@ const SideBar = () => {
   }, [router.pathname]);
 
   return (
-    <div className="fixed z-10  m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg dark:bg-zinc-800 dark:text-white sm:left-[calc((100%-384px)/2-120px)] sm:top-2/4 sm:h-[500px] sm:-translate-y-2/4  sm:rounded-2xl lg:left-[calc((100%-672px)/2-120px)]">
+    <div
+      className={`fixed z-10 m-0  flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[500px] sm:-translate-y-2/4  sm:rounded-2xl ${
+        !onLeft
+          ? 'sm:right-[calc((100%-384px)/2-130px)] lg:right-[calc((100%-672px)/2-130px)]'
+          : 'sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]'
+      }`}>
       <Link href="/">
         <a>
           <SideBarIcon
@@ -87,8 +95,20 @@ const SideBar = () => {
         />
       </a>
       <div
+        onClick={() => setOnRight(!onLeft)}
+        className="group relative mx-auto mt-auto mb-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl">
+        <div className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
+        {onLeft ? <FaArrowRight size={28} /> : <FaArrowLeft size={28} />}
+        <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
+          <div className="absolute left-[-4px] inline-block w-2 overflow-hidden">
+            <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
+          </div>
+          {onLeft ? 'Move to right' : 'Move to left'}
+        </span>
+      </div>
+      <div
         onClick={() => toggleTheme()}
-        className={`group relative mx-auto mt-auto mb-2 flex h-12 w-12 items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl ${
+        className={`group relative mx-auto my-2  flex h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl ${
           isDark
             ? 'bg-purple-500 hover:bg-purple-600'
             : 'bg-orange-400 hover:bg-orange-500'
