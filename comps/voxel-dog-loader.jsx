@@ -1,10 +1,12 @@
 import { forwardRef } from 'react';
 
-export const DogSpinner = () => (
-  <div className="absolute top-2/4 left-2/4">
-    <svg className=" h-5 w-5 animate-spin" viewBox="0 0 24 24"></svg>
-  </div>
-);
+export const DogSpinner = () => {
+  return (
+    <div className="absolute flex h-full w-full items-center justify-center">
+      <div className="aspect-square w-7 animate-spin rounded-md bg-sky-300 dark:bg-teal-300"></div>
+    </div>
+  );
+};
 
 export const DogContainer = forwardRef(({ children }, ref) => (
   <div

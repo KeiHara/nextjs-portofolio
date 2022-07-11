@@ -22,9 +22,9 @@ const Layout = ({ children }: props) => {
   };
 
   useEffect(() => {
-    window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+    window.innerWidth < 1024 ? setIsMobile(true) : setIsMobile(false);
     window.addEventListener('resize', () => {
-      window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+      window.innerWidth < 1024 ? setIsMobile(true) : setIsMobile(false);
     });
   });
 
@@ -40,30 +40,31 @@ const Layout = ({ children }: props) => {
               },
             }}
           />
-          <SwipeableDrawer
-            onOpen={toggleDrawer()}
-            onClose={toggleDrawer()}
-            disableSwipeToOpen={false}
-            anchor="left"
-            swipeAreaWidth={16}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            open={open}>
-            <div className="visible absolute right-[-16px] flex h-full w-[16px] items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
-              <div className="position absolute h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
-            </div>
-            <SideBar />
-          </SwipeableDrawer>
+          <div onClick={toggleDrawer()} className="cursor-pointer">
+            <SwipeableDrawer
+              onOpen={toggleDrawer()}
+              onClose={toggleDrawer()}
+              anchor="left"
+              swipeAreaWidth={16}
+              ModalProps={{
+                keepMounted: true,
+              }}
+              open={open}>
+              <div className="visible absolute right-[-16px] flex h-full w-[16px]  items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
+                <div className="position absolute h-36 w-2 rounded-md bg-neutral-400 dark:bg-zinc-800"></div>
+              </div>
+              <SideBar />
+            </SwipeableDrawer>
+          </div>
         </div>
       ) : (
         <SideBar />
       )}
 
-      <div className="float-right w-[calc(100%-16px)]  bg-neutral-300 dark:bg-zinc-900 sm:w-full">
-        <div className="scrollbar flex h-screen flex-col sm:ml-[80px]">
+      <div className="float-right w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 lg:w-full">
+        <div className="flex h-screen flex-col">
           <TopNav />
-          <div className="scrollbar overflow-auto">
+          <div className="scrollbar  overflow-auto">
             <div className="mt-16 flex justify-center">
               <LazyVoxelDog />
             </div>

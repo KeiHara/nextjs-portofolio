@@ -59,7 +59,7 @@ const SideBar = () => {
   }, [router.pathname]);
 
   return (
-    <div className="fixed top-0 left-0 z-10 m-0 flex h-screen w-20 flex-col bg-neutral-200 py-2 shadow-lg  dark:bg-zinc-800 dark:text-white">
+    <div className="fixed z-10 m-0 flex h-full w-20 flex-col bg-neutral-200  py-2 shadow-lg dark:bg-zinc-800 dark:text-white lg:top-2/4 lg:left-12 lg:h-[500px]  lg:-translate-y-2/4 lg:rounded-2xl">
       <Link href="/">
         <a>
           <SideBarIcon
@@ -93,10 +93,10 @@ const SideBar = () => {
             ? 'bg-purple-500 hover:bg-purple-600'
             : 'bg-orange-400 hover:bg-orange-500'
         } `}>
-        <div className="fixed left-[-4px] h-2 w-2 origin-left scale-0 rounded-full duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
+        <div className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
         <FaFire size={28} />
         <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
-          <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
+          <div className="absolute left-[-4px] inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
           </div>
           change theme
@@ -119,7 +119,7 @@ const SideBarIcon = ({
       <div
         className={`${
           toggled && 'left-0 h-5 scale-100'
-        } fixed left-[-4px] h-2 w-2 origin-left scale-0 rounded-full bg-sky-300 duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-teal-300`}></div>
+        } absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full bg-sky-300 duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-teal-300`}></div>
       {createElement(icon)}
       <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
         <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
