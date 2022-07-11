@@ -14,7 +14,7 @@ const works = () => {
         <h3 className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
-        <div className="grid justify-items-center gap-12 md:grid-cols-2 md:gap-6">
+        <div className="grid justify-items-center gap-16 md:grid-cols-2 md:gap-6">
           {works.map((work) => (
             <WorkCard
               href={work.href}
@@ -46,28 +46,29 @@ const WorkCard = ({
   href,
 }: workCardProps) => {
   return (
-    <div>
+    <a
+      className="rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
+      target="_blank"
+      href={href}>
       <div>
-        <a target="_blank" href={href}>
-          <div
-            className={`flex h-36 ${
-              imgSrcs ? 'justify-between' : 'justify-center'
-            }`}>
-            {imgSrcs ? (
-              imgSrcs.map((src) => (
-                <img className="rounded-md" src={src} alt="img" />
-              ))
-            ) : (
-              <img className="rounded-md" src={imgSrc} alt="img" />
-            )}
-          </div>
-        </a>
+        <div
+          className={`flex h-36 ${
+            imgSrcs ? 'justify-between' : 'justify-center'
+          }`}>
+          {imgSrcs ? (
+            imgSrcs.map((src) => (
+              <img className="rounded-md" src={src} alt="img" />
+            ))
+          ) : (
+            <img className="rounded-md" src={imgSrc} alt="img" />
+          )}
+        </div>
       </div>
       <div className="mt-5 flex flex-col content-center items-center">
         <h1 className="text-4xl font-bold dark:text-white">{title}</h1>
         <p className="text-center dark:text-white">{description}</p>
       </div>
-    </div>
+    </a>
   );
 };
 
