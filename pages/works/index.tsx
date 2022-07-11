@@ -5,7 +5,7 @@ const works = () => {
   const works = worksJson;
 
   return (
-    <div className="max-w-sm sm:max-w-lg md:max-w-2xl">
+    <div className="mx-3 max-w-sm  lg:max-w-2xl">
       <Head>
         <title>My works</title>
       </Head>

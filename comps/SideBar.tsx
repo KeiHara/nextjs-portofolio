@@ -59,7 +59,7 @@ const SideBar = () => {
   }, [router.pathname]);
 
   return (
-    <div className="fixed z-10 m-0 flex h-full w-20 flex-col bg-neutral-200  py-2 shadow-lg dark:bg-zinc-800 dark:text-white lg:top-2/4 lg:left-12 lg:h-[500px]  lg:-translate-y-2/4 lg:rounded-2xl">
+    <div className="fixed z-10  m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg dark:bg-zinc-800 dark:text-white sm:left-[calc((100%-384px)/2-120px)] sm:top-2/4 sm:h-[500px] sm:-translate-y-2/4  sm:rounded-2xl lg:left-[calc((100%-672px)/2-120px)]">
       <Link href="/">
         <a>
           <SideBarIcon

@@ -7,7 +7,7 @@ import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <div className="max-w-sm sm:max-w-lg md:max-w-2xl">
+    <div className="mx-3 max-w-sm  lg:max-w-2xl">
       <Head>
         <title>Keisuke Hara | About me</title>
       </Head>
