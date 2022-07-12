@@ -148,7 +148,7 @@ const SideBarIcon = ({
       } group relative mx-auto mt-2 mb-2 flex h-12 w-12 items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl hover:bg-sky-300 dark:bg-zinc-700 hover:dark:bg-teal-300`}>
       <div
         className={`${
-          toggled && 'left-0 h-5 scale-100'
+          toggled && 'left-[-16px] h-5 scale-100'
         } absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full bg-sky-300 duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-teal-300`}></div>
       {createElement(icon)}
       <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
