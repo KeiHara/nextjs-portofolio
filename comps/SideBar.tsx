@@ -14,6 +14,7 @@ interface SideBarIconProps {
 
 const SideBar = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (
       localStorage.theme === 'dark' ||
@@ -28,6 +29,13 @@ const SideBar = () => {
       localStorage.theme = 'light';
     }
   }, []);
+
+  useEffect(() => {
+    window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+    window.addEventListener('resize', () => {
+      window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
+    });
+  });
 
   const toggleTheme = (): void => {
     if (isDark) {
@@ -94,9 +102,10 @@ const SideBar = () => {
           text="Source"
         />
       </a>
+
       <div
         onClick={() => setOnRight(!onLeft)}
-        className="group relative mx-auto mt-auto mb-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl">
+        className=" group relative mx-auto mt-auto mb-2 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl  sm:flex">
         <div className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
         {onLeft ? <FaArrowRight size={28} /> : <FaArrowLeft size={28} />}
         <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
@@ -106,9 +115,10 @@ const SideBar = () => {
           {onLeft ? 'Move to right' : 'Move to left'}
         </span>
       </div>
+
       <div
         onClick={() => toggleTheme()}
-        className={`group relative mx-auto my-2  flex h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear  hover:rounded-xl ${
+        className={`group relative mx-auto mb-2 mt-auto flex  h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl sm:mt-2 ${
           isDark
             ? 'bg-purple-500 hover:bg-purple-600'
             : 'bg-orange-400 hover:bg-orange-500'
