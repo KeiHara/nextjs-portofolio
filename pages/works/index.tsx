@@ -46,7 +46,7 @@ const WorkCard = ({
 }: workCardProps) => {
   return (
     <a
-      className="rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
+      className="group rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
       target="_blank"
       href={href}>
       <div>
@@ -56,10 +56,18 @@ const WorkCard = ({
           }`}>
           {imgSrcs ? (
             imgSrcs.map((src) => (
-              <img className="rounded-md" src={src} alt="img" />
+              <img
+                className="rounded-md transition ease-in-out group-hover:scale-105"
+                src={src}
+                alt="img"
+              />
             ))
           ) : (
-            <img className="rounded-md" src={imgSrc} alt="img" />
+            <img
+              className="rounded-md transition ease-in-out group-hover:scale-105"
+              src={imgSrc}
+              alt="img"
+            />
           )}
         </div>
       </div>
