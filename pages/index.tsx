@@ -84,7 +84,7 @@ const Home: NextPage = () => {
 
           <div className="w-fit font-bold dark:text-white">2022 Summer</div>
           <p className="dark:text-white">
-            Working as a Front engineer at University of Auckland helping a
+            Working as a Frontend engineer at University of Auckland helping a
             research project called&nbsp;
             <a
               className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
