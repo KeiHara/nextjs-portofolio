@@ -54,7 +54,7 @@ const Home: NextPage = () => {
             target="_blank">
             Kekeno Tech
           </a>
-          , developing variety of projects.
+          , developing a variety of projects.
         </p>
       </div>
       {/* Bio */}
