@@ -1,5 +1,11 @@
 import React, { createElement, useEffect, useState } from 'react';
-import { FaArrowLeft, FaArrowRight, FaFire, FaGithub } from 'react-icons/fa';
+import {
+  FaArrowLeft,
+  FaArrowRight,
+  FaGithub,
+  FaMoon,
+  FaSun,
+} from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
 import { MdWorkOutline } from 'react-icons/md';
@@ -124,7 +130,8 @@ const SideBar = () => {
             : 'bg-orange-400 hover:bg-orange-500'
         } `}>
         <div className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
-        <FaFire size={28} />
+        {isDark ? <FaMoon size={28} /> : <FaSun size={28} />}
+
         <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
           <div className="absolute left-[-4px] inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>

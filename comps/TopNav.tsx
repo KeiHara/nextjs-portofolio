@@ -19,11 +19,13 @@ const TopNav = () => {
 
   return (
     <div
-      className="bg-neutral sticky z-10 flex  w-full bg-neutral-200/50 shadow-lg backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
+      className="bg-neutral sticky z-10 flex w-full justify-center bg-neutral-200/50 shadow-lg backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
   ">
-      <h1 className="my-4 ml-[16px] text-4xl font-bold text-black dark:text-white">
-        {pageTitle}
-      </h1>
+      <div className="w-full max-w-sm lg:max-w-2xl">
+        <h1 className="my-4 text-4xl font-bold text-black dark:text-white">
+          {pageTitle}
+        </h1>
+      </div>
     </div>
   );
 };
