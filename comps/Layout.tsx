@@ -63,11 +63,11 @@ const Layout = ({ children }: props) => {
       <div className="float-right w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-full">
         <div className="flex h-screen flex-col">
           <TopNav />
-          <div className="scrollbar  overflow-auto">
-            <div className="mt-16 flex justify-center">
+          <div className="scrollbar overflow-auto pt-[72px]">
+            <div className="mt-12 flex justify-center">
               <LazyVoxelDog />
             </div>
-            <div className=" relative">{children}</div>
+            <div className="relative">{children}</div>
           </div>
         </div>
       </div>
