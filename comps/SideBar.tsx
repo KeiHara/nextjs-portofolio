@@ -77,7 +77,7 @@ const SideBar = () => {
 
   return (
     <div
-      className={`fixed z-50 m-0 flex h-full w-20 flex-col  bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[500px] sm:max-h-[50vh] sm:-translate-y-2/4  sm:rounded-2xl ${
+      className={`fixed z-50 m-0 flex h-full w-20 flex-col  bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[400px] sm:-translate-y-2/4  sm:rounded-2xl ${
         !onLeft
           ? 'sm:left-[calc((100%-384px)/2+384px+40px)] lg:left-[calc((100%-672px)/2+672px+40px)]'
           : 'sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]'
