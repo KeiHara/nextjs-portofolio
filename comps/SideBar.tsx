@@ -77,7 +77,7 @@ const SideBar = () => {
 
   return (
     <div
-      className={`fixed z-50 m-0 flex h-full w-20 flex-col  bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[400px] sm:-translate-y-2/4  sm:rounded-2xl ${
+      className={`resize-style fixed z-50 m-0 flex h-full w-20 resize-y  flex-col overflow-y-auto  bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[400px] sm:max-h-[550px] sm:min-h-[400px] sm:-translate-y-2/4  sm:rounded-2xl ${
         !onLeft
           ? 'sm:left-[calc((100%-384px)/2+384px+40px)] lg:left-[calc((100%-672px)/2+672px+40px)]'
           : 'sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]'
@@ -111,11 +111,11 @@ const SideBar = () => {
 
       <div
         onClick={() => setOnRight(!onLeft)}
-        className=" group relative mx-auto mt-auto mb-2 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl  sm:flex">
+        className=" group relative mx-auto mt-auto mb-2 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl dark:bg-zinc-700  sm:flex">
         <div className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
         {onLeft ? <FaArrowRight size={28} /> : <FaArrowLeft size={28} />}
         <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
-          <div className="absolute left-[-4px] inline-block w-2 overflow-hidden">
+          <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
           </div>
           {onLeft ? 'Move to right' : 'Move to left'}
@@ -133,7 +133,7 @@ const SideBar = () => {
         {isDark ? <FaMoon size={28} /> : <FaSun size={28} />}
 
         <span className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
-          <div className="absolute left-[-4px] inline-block w-2 overflow-hidden">
+          <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
           </div>
           change theme

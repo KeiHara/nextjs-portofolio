@@ -36,3 +36,7 @@ h6 {
     @apply rounded-full bg-neutral-400 transition delay-150 duration-300 dark:bg-zinc-700;
   }
 }
+
+.resize-style::-webkit-resizer {
+  @apply hidden;
+}
