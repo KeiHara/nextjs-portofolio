@@ -8,7 +8,7 @@ import {
 } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { BiUserCircle } from 'react-icons/bi';
-import { MdWorkOutline } from 'react-icons/md';
+import { MdMusicNote, MdWorkOutline } from 'react-icons/md';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -77,7 +77,7 @@ const SideBar = () => {
 
   return (
     <div
-      className={`fixed z-50 m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[400px] sm:max-h-[550px] sm:min-h-[400px] sm:-translate-y-2/4  sm:rounded-2xl ${
+      className={`fixed z-50 m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[500px] sm:max-h-[80%] sm:-translate-y-2/4  sm:rounded-2xl ${
         !onLeft
           ? 'sm:left-[calc((100%-384px)/2+384px+40px)] lg:left-[calc((100%-672px)/2+672px+40px)]'
           : 'sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]'
@@ -101,10 +101,19 @@ const SideBar = () => {
           />
         </a>
       </Link>
+      <Link href="/music">
+        <a>
+          <SideBarIcon
+            icon={(props) => <MdMusicNote size={28} />}
+            toggled={toggledSideBarIcon[2]}
+            text="My music"
+          />
+        </a>
+      </Link>
       <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank">
         <SideBarIcon
           icon={(props) => <FaGithub size={28} />}
-          toggled={toggledSideBarIcon[2]}
+          toggled={toggledSideBarIcon[3]}
           text="Source"
         />
       </a>

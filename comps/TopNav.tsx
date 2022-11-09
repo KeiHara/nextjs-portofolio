@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 const TopNav = () => {
   const [pageTitle, setPageTitle] = useState('');
   const router = useRouter();
+
   useEffect(() => {
-    console.log(router.asPath);
     switch (router.asPath) {
       case '/':
         setPageTitle('About me');

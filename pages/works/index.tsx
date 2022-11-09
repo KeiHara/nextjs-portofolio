@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import worksJson from './works.json';
 
-const works = () => {
+const Works = () => {
   const works = worksJson;
 
   return (
@@ -79,4 +79,4 @@ const WorkCard = ({
   );
 };
 
-export default works;
+export default Works;
