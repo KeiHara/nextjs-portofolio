@@ -1,10 +1,9 @@
 import SideBar from './SideBar';
 import TopNav from './TopNav';
 import { useEffect, useState } from 'react';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import { Global } from '@emotion/react';
 import dynamic from 'next/dynamic';
 import VoxelDogLoader from './voxel-dog-loader';
+import BottomNav from "./BottomNav";
 interface props {
   children: JSX.Element;
 }
@@ -15,11 +14,7 @@ const LazyVoxelDog = dynamic(() => import('./voxel-dog'), {
 });
 
 const Layout = ({ children }: props) => {
-  const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const toggleDrawer = () => () => {
-    setOpen(!open);
-  };
 
   useEffect(() => {
     window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
@@ -31,44 +26,25 @@ const Layout = ({ children }: props) => {
   return (
     <div>
       {isMobile ? (
-        <div>
-          <Global
-            styles={{
-              '.MuiDrawer-root > .MuiPaper-root': {
-                width: `80px`,
-                overflow: 'visible',
-              },
-            }}
-          />
-          <SwipeableDrawer
-            onOpen={toggleDrawer()}
-            onClose={toggleDrawer()}
-            disableSwipeToOpen={false}
-            anchor="left"
-            swipeAreaWidth={16}
-            ModalProps={{
-              keepMounted: true,
-            }}
-            open={open}>
-            <div className="visible absolute right-[-16px] flex h-full w-[16px]  items-center justify-center bg-neutral-300 shadow-lg dark:bg-zinc-900">
-              <div className="position absolute h-36 w-2  rounded-md bg-sky-500 dark:bg-teal-500"></div>
-            </div>
-            <SideBar />
-          </SwipeableDrawer>
-        </div>
+        <div></div>
       ) : (
         <SideBar />
-      )}
+        )}
 
-      <div className="float-right w-[calc(100%-16px)] bg-neutral-300 dark:bg-zinc-900 sm:w-full">
+      <div className="bg-neutral-300 dark:bg-zinc-900 w-full flex flex-col">
         <div className="flex h-screen flex-col">
-          <TopNav />
-          <div className="scrollbar overflow-auto pt-[72px]">
+          {!isMobile ? (
+              <TopNav />
+          ) : ( <div></div> )}
+          <div className="scrollbar overflow-auto flex-1">
             <div className="mt-16 flex justify-center">
               <LazyVoxelDog />
             </div>
             <div className="relative">{children}</div>
           </div>
+          {isMobile ? (
+              <BottomNav />
+          ): ( <div></div> )}
         </div>
       </div>
     </div>

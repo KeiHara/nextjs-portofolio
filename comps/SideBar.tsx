@@ -20,7 +20,6 @@ interface SideBarIconProps {
 
 const SideBar = () => {
   const [isDark, setIsDark] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (
       localStorage.theme === 'dark' ||
@@ -34,14 +33,8 @@ const SideBar = () => {
       document.documentElement.classList.remove('dark');
       localStorage.theme = 'light';
     }
+    return () => {};
   }, []);
-
-  useEffect(() => {
-    window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
-    window.addEventListener('resize', () => {
-      window.innerWidth < 640 ? setIsMobile(true) : setIsMobile(false);
-    });
-  });
 
   const toggleTheme = (): void => {
     if (isDark) {

@@ -14,13 +14,14 @@ const Works = () => {
           Work
         </h3>
         <div className="grid justify-items-center gap-16 lg:grid-cols-2 lg:gap-6">
-          {works.map((work) => (
+          {works.map((work, i) => (
             <WorkCard
               href={work.href}
               imgSrcs={work.imgSrcs}
               imgSrc={work.imgSrc}
               title={work.title}
               description={work.description}
+              key={i}
             />
           ))}
         </div>
@@ -48,7 +49,7 @@ const WorkCard = ({
     <a
       className="group rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
       target="_blank"
-      href={href}>
+      href={href} rel="noreferrer">
       <div>
         <div
           className={`flex h-36 ${

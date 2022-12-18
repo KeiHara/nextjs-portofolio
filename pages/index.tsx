@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         </div>
         {/* prof pic */}
         <div className="flex h-fit w-24 overflow-hidden rounded-full border-2">
-          <a target="_blank" href="https://www.linkedin.com/in/keisuke-hara/">
+          <a target="_blank" href="https://www.linkedin.com/in/keisuke-hara/" rel="noreferrer">
             <div className="group flex items-center justify-center">
               <img
                 className="rounded-full duration-200 ease-linear group-hover:blur-sm"
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
           <a
             className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
             href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
-            target="_blank">
+            target="_blank" rel="noreferrer">
             Kekeno Tech
           </a>
           , developing a variety of projects.
@@ -77,7 +77,7 @@ const Home: NextPage = () => {
             <a
               className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
-              target="_blank">
+              target="_blank" rel="noreferrer">
               Kekeno Tech
             </a>
           </p>
@@ -89,7 +89,7 @@ const Home: NextPage = () => {
             <a
               className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://habits.school/"
-              target="_blank">
+              target="_blank" rel="noreferrer">
               Habits
             </a>
           </p>
@@ -139,7 +139,7 @@ const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => (
   <a
     target="_blank"
     href={mediaLink}
-    className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20">
+    className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20" rel="noreferrer">
     <div className="text-sky-700 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
       {createElement(icon)}
     </div>
