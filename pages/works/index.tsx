@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import worksJson from './works.json';
+import Head from "next/head";
+import worksJson from "./works.json";
 
 const Works = () => {
   const works = worksJson;
@@ -10,18 +10,19 @@ const Works = () => {
         <title>My works</title>
       </Head>
       <div className="flex w-full flex-col items-center">
-        <h3 className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
+        <h3
+          className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
         <div className="grid justify-items-center gap-16 lg:grid-cols-2 lg:gap-6">
           {works.map((work, i) => (
             <WorkCard
+              key={i}
               href={work.href}
               imgSrcs={work.imgSrcs}
               imgSrc={work.imgSrc}
               title={work.title}
               description={work.description}
-              key={i}
             />
           ))}
         </div>
@@ -39,12 +40,12 @@ interface workCardProps {
 }
 
 const WorkCard = ({
-  imgSrc,
-  title,
-  description,
-  imgSrcs,
-  href,
-}: workCardProps) => {
+                    imgSrc,
+                    title,
+                    description,
+                    imgSrcs,
+                    href
+                  }: workCardProps) => {
   return (
     <a
       className="group rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
@@ -53,11 +54,12 @@ const WorkCard = ({
       <div>
         <div
           className={`flex h-36 ${
-            imgSrcs ? 'justify-between' : 'justify-center'
+            imgSrcs ? "justify-between" : "justify-center"
           }`}>
           {imgSrcs ? (
-            imgSrcs.map((src) => (
+            imgSrcs.map((src, i) => (
               <img
+                key={i}
                 className="rounded-md transition ease-in-out group-hover:scale-105"
                 src={src}
                 alt="img"
