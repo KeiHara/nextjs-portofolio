@@ -16,22 +16,6 @@ interface SideBarIconProps {
 
 const SideBar = () => {
   const [isDark, setIsDark] = useState(false);
-  useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-      localStorage.theme = "dark";
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
-    }
-    return () => {
-    };
-  }, []);
 
   const toggleTheme = (): void => {
     if (isDark) {
@@ -51,7 +35,7 @@ const SideBar = () => {
     false
   ]);
 
-  const [onLeft, setOnRight] = useState(true);
+  const [isOnLeft, setIsOnLeft] = useState(true);
 
   const router = useRouter();
   useEffect(() => {
@@ -65,10 +49,27 @@ const SideBar = () => {
     }
   }, [router.pathname]);
 
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+      setIsDark(true);
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
+    return () => {
+    };
+  }, [isDark]);
+
   return (
     <div
       className={`fixed z-50 m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[500px] sm:max-h-[80%] sm:-translate-y-2/4  sm:rounded-2xl ${
-        !onLeft
+        !isOnLeft
           ? "sm:left-[calc((100%-384px)/2+384px+40px)] lg:left-[calc((100%-672px)/2+672px+40px)]"
           : "sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]"
       }`}>
@@ -112,21 +113,76 @@ const SideBar = () => {
           isDark={isDark}
         />
       </a>
+      <motion.div whileHover={["hover", isDark ? "darkHighlight" : "lightHighlight"]}
+                  animate={["initial", isDark ? "dark" : "light"]}
+                  className="group relative mt-auto py-2 cursor-pointer"
+                  onClick={() => setIsOnLeft(!isOnLeft)}
+      >
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          initial={false}
+          variants={{
+            initial: {
+              scale: 1,
+              borderRadius: 24
+            },
+            hover: {
+              scale: 1.1,
+              borderRadius: 12
+            },
+            dark: {
+              backgroundColor: "rgb(63 63 70)"
+            },
+            light: {
+              backgroundColor: "rgb(229 229 229)"
+            }
+          }}
+          transition={{
+            scale: { type: "spring", bounce: 0.75 },
+            borderRadius: { type: "spring", bounce: 0.75 }
+          }}
 
-      <div
-        onClick={() => setOnRight(!onLeft)}
-        className=" group relative mx-auto mt-auto mb-2 hidden h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl dark:bg-zinc-700  sm:flex">
-        <div
-          className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
-        {onLeft ? <FaArrowRight size={28} /> : <FaArrowLeft size={28} />}
-        <span
-          className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
-          <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
+          className="flex mx-auto h-12 w-12 items-center justify-center shadow-md">
+          {isOnLeft ? <FaArrowRight size={28} /> : <FaArrowLeft size={28} />}
+        </motion.div>
+        <motion.div
+          variants={{
+            hover: {
+              height: "1.25rem"
+            },
+            darkHighlight: {
+              backgroundColor: "rgb(255 255 255)"
+            },
+            lightHighlight: {
+              backgroundColor: "rgb(0 0 0)"
+            }
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut"
+          }}
+          className={`absolute top-1/2 w-1 -translate-y-1/2 origin-left rounded-r-full`}></motion.div>
+        <motion.span
+          variants={{
+            hover: {
+              scale: 1
+            }
+          }}
+          style={{
+            originX: 0,
+            scale: 0,
+            position: "absolute",
+            top: "50%",
+            translateY: "-50%",
+            left: "120%"
+          }}
+          className="flex min-w-max items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
+          <div className="absolute left-0 -translate-x-full inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
           </div>
-          {onLeft ? "Move to right" : "Move to left"}
-        </span>
-      </div>
+          {isOnLeft ? "Move to right" : "Move to left"}
+        </ motion.span>
+      </motion.div>
 
       <div
         onClick={() => toggleTheme()}
@@ -158,10 +214,12 @@ const SideBarIcon = ({
                        text = "tooltip 😀"
                      }: SideBarIconProps) => {
   return (
-    <motion.div whileHover={"hover"} animate={toggled ? "toggled" : "unToggled"}
+    <motion.div whileHover={["hover", isDark ? "darkHighlight" : "lightHighlight"]}
+                animate={toggled ? ["toggled", isDark ? "darkHighlight" : "lightHighlight"] : ["unToggled", isDark ? "dark" : "light"]}
                 className="group relative py-2">
       <motion.div
         whileTap={{ scale: 0.9 }}
+        initial={false}
         variants={{
           toggled: {
             borderRadius: 12
@@ -172,28 +230,45 @@ const SideBarIcon = ({
           hover: {
             scale: 1.1,
             borderRadius: 12
+          },
+          dark: {
+            backgroundColor: "rgb(63 63 70)"
+          },
+          light: {
+            backgroundColor: "rgb(229 229 229)"
+          },
+          darkHighlight: {
+            backgroundColor: "rgb(94 234 212)"
+          },
+          lightHighlight: {
+            backgroundColor: "rgb(125 211 252)"
           }
         }}
         transition={{
           scale: { type: "spring", bounce: 0.75 },
           borderRadius: { type: "spring", bounce: 0.75 }
         }}
-        className={`flex mx-auto h-12 w-12 items-center justify-center shadow-md ${toggled ? "bg-sky-300 dark:bg-teal-300" : "bg-neutral-200 dark:bg-zinc-700"} hover:bg-sky-300 dark:hover:bg-teal-300`}>
+
+        className={`flex mx-auto h-12 w-12 items-center justify-center shadow-md`}>
         {createElement(icon)}
       </motion.div>
       <motion.div
         variants={{
           toggled: {
-            width: "4px"
+            height: "1.25rem"
           },
           unToggled: {
-            width: "0px"
+            height: "0rem"
           },
           hover: {
-            width: "4px"
+            height: "1.25rem"
           }
         }}
-        className={`absolute top-1/2 h-6 -translate-y-1/2 origin-left rounded-r-full bg-sky-300 dark:bg-teal-300`}></motion.div>
+        transition={{
+          duration: 0.2,
+          ease: "easeInOut"
+        }}
+        className={`absolute top-1/2 w-1 -translate-y-1/2 origin-left rounded-r-full bg-sky-300 dark:bg-teal-300`}></motion.div>
       <motion.span
         variants={{
           hover: {

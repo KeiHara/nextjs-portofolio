@@ -1,5 +1,6 @@
 import Head from "next/head";
 import worksJson from "./works.json";
+import { motion } from "framer-motion";
 
 const Works = () => {
   const works = worksJson;
@@ -47,10 +48,11 @@ const WorkCard = ({
                     href
                   }: workCardProps) => {
   return (
-    <a
-      className="group rounded-md p-4 transition duration-150 ease-in-out hover:bg-neutral-400 dark:hover:bg-zinc-800"
+    <motion.a
+      whileHover={"hover"}
+      className="group rounded-md p-4 hover:bg-neutral-400 dark:hover:bg-zinc-800"
       target="_blank"
-      href={href} rel="noreferrer">
+      href={href}>
       <div>
         <div
           className={`flex h-36 ${
@@ -58,16 +60,26 @@ const WorkCard = ({
           }`}>
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
-              <img
+              <motion.img
+                variants={{
+                  hover: {
+                    scale: 1.05
+                  }
+                }}
                 key={i}
-                className="rounded-md transition ease-in-out group-hover:scale-105"
+                className="rounded-md"
                 src={src}
                 alt="img"
               />
             ))
           ) : (
-            <img
-              className="rounded-md transition ease-in-out group-hover:scale-105"
+            <motion.img
+              variants={{
+                hover: {
+                  scale: 1.05
+                }
+              }}
+              className="rounded-md"
               src={imgSrc}
               alt="img"
             />
@@ -78,7 +90,7 @@ const WorkCard = ({
         <h1 className="text-4xl font-bold dark:text-white">{title}</h1>
         <p className="text-center dark:text-white">{description}</p>
       </div>
-    </a>
+    </motion.a>
   );
 };
 
