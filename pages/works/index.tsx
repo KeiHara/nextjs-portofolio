@@ -50,7 +50,7 @@ const WorkCard = ({
   return (
     <motion.a
       whileHover={"hover"}
-      className="group rounded-md p-4 hover:bg-neutral-400 dark:hover:bg-zinc-800"
+      className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800"
       target="_blank"
       href={href}>
       <div>

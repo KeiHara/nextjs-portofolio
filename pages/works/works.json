@@ -11,13 +11,7 @@
     "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
   },
   {
-    "href": "https://habits.school/",
-    "imgSrc": "work_imgs/habits.png",
-    "title": "Habits",
-    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
-  },
-  {
-    "href": "#",
+    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
     "imgSrcs": [
       "work_imgs/ida1.png",
       "work_imgs/ida2.png",
@@ -26,6 +20,12 @@
     "imgSrc": "work_imgs/ida.png",
     "title": "IDA",
     "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors."
+  },
+  {
+    "href": "https://habits.school/",
+    "imgSrc": "work_imgs/habits.png",
+    "title": "Habits",
+    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
   },
   {
     "href": "https://devs.org.nz",

@@ -94,17 +94,6 @@ const SideBar = () => {
           />
         </a>
       </Link>
-      <Link href="/music">
-        <a>
-          <SideBarIcon
-            icon={(props) => <MdMusicNote size={28} />}
-            toggled={toggledSideBarIcon[2]}
-            text="My music"
-            isDark={isDark}
-
-          />
-        </a>
-      </Link>
       <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank">
         <SideBarIcon
           icon={(props) => <FaGithub size={28} />}
@@ -134,7 +123,7 @@ const SideBar = () => {
               backgroundColor: "rgb(63 63 70)"
             },
             light: {
-              backgroundColor: "rgb(229 229 229)"
+              backgroundColor: "rgb(245 245 245)"
             }
           }}
           transition={{
@@ -176,7 +165,7 @@ const SideBar = () => {
             translateY: "-50%",
             left: "120%"
           }}
-          className="flex min-w-max items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
+          className="flex min-w-max items-center rounded-md bg-neutral-100 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
           <div className="absolute left-0 -translate-x-full inline-block w-2 overflow-hidden">
             <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
           </div>
@@ -214,7 +203,7 @@ const SideBarIcon = ({
                        text = "tooltip 😀"
                      }: SideBarIconProps) => {
   return (
-    <motion.div whileHover={["hover", isDark ? "darkHighlight" : "lightHighlight"]}
+    <motion.div whileHover={[!toggled ? "hover" : "", isDark ? "darkHighlight" : "lightHighlight"]}
                 animate={toggled ? ["toggled", isDark ? "darkHighlight" : "lightHighlight"] : ["unToggled", isDark ? "dark" : "light"]}
                 className="group relative py-2">
       <motion.div
@@ -235,7 +224,7 @@ const SideBarIcon = ({
             backgroundColor: "rgb(63 63 70)"
           },
           light: {
-            backgroundColor: "rgb(229 229 229)"
+            backgroundColor: "rgb(245 245 245)"
           },
           darkHighlight: {
             backgroundColor: "rgb(94 234 212)"
@@ -255,7 +244,7 @@ const SideBarIcon = ({
       <motion.div
         variants={{
           toggled: {
-            height: "1.25rem"
+            height: "2rem"
           },
           unToggled: {
             height: "0rem"
@@ -283,9 +272,9 @@ const SideBarIcon = ({
           translateY: "-50%",
           left: "120%"
         }}
-        className="flex min-w-max items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
+        className="flex min-w-max items-center rounded-md bg-neutral-100 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
         <div className="absolute left-0 -translate-x-full inline-block w-2 overflow-hidden">
-          <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
+          <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-100 dark:bg-zinc-800"></div>
         </div>
         {text}
       </ motion.span>
