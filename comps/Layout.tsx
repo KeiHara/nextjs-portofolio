@@ -24,7 +24,7 @@ const Layout = ({ children }: props) => {
   });
 
   return (
-    <div className='h-full'>
+    <div>
       {isMobile ? (
         <div></div>
       ) : (
@@ -32,7 +32,7 @@ const Layout = ({ children }: props) => {
         )}
 
       <div className="bg-neutral-300 dark:bg-zinc-900 w-full flex flex-col">
-        <div className="flex h-full flex-col">
+        <div className="flex flex-col">
           {!isMobile ? (
               <TopNav />
           ) : ( <div></div> )}
