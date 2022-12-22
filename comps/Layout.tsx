@@ -24,7 +24,7 @@ const Layout = ({ children }: props) => {
   });
 
   return (
-    <div>
+    <div className='h-full'>
       {isMobile ? (
         <div></div>
       ) : (
@@ -32,11 +32,11 @@ const Layout = ({ children }: props) => {
         )}
 
       <div className="bg-neutral-300 dark:bg-zinc-900 w-full flex flex-col">
-        <div className="flex h-screen flex-col">
+        <div className="flex h-full flex-col">
           {!isMobile ? (
               <TopNav />
           ) : ( <div></div> )}
-          <div className="scrollbar overflow-auto flex-1">
+          <div className="scrollbar overflow-auto sm:flex-1 h-[calc(100vh-4.5rem)]">
             <div className="mt-16 flex justify-center">
               <LazyVoxelDog />
             </div>

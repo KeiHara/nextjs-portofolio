@@ -65,7 +65,7 @@ const BottomNav = () => {
 
   return (
     <div
-      className="flex rounded-t-3xl h-[4.5rem] w-full items-center justify-evenly bg-neutral-200/50 shadow-sm backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
+      className="flex fixed bottom-0 rounded-t-3xl h-[4.5rem] w-full items-center justify-evenly bg-neutral-200/50 shadow-sm backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
         ">
       <Link href="/">
         <a className="h-full">
