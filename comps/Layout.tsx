@@ -36,7 +36,7 @@ const Layout = ({ children }: props) => {
           {!isMobile ? (
               <TopNav />
           ) : ( <div></div> )}
-          <div className="scrollbar overflow-auto sm:pt-[4.5rem] sm:h-screen h-[calc(100vh-4.5rem)] pb-[4.5rem] sm:pb-0">
+          <div className="scrollbar overflow-auto sm:pt-[4.5rem] sm:h-screen h-[calc(100vh-4.5rem)] pb-12 sm:pb-0">
             <div className="mt-16 flex justify-center">
               <LazyVoxelDog />
             </div>
