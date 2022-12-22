@@ -47,7 +47,7 @@ const SideBar = () => {
         setToggledSideBarIcon([false, true, false, false]);
         break;
     }
-  }, [router.pathname]);
+  }, [router.asPath]);
 
   useEffect(() => {
     if (
