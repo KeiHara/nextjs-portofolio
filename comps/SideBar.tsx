@@ -218,7 +218,12 @@ const SideBar = () => {
             variants={{
               dark: {
                 rotateZ: 180,
+                transition: { duration: 0.75, type: "spring" }
               },
+              light: {
+                rotateZ: 0,
+                transition: { duration: 0.75, type: "spring" }
+              }
             }}
           >
         <FaSun size={28} />
