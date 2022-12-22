@@ -175,17 +175,20 @@ const SideBar = () => {
 
     {/* theme button */}
       <motion.div whileHover={["hover", isDark ? "darkHighlight" : "lightHighlight"]}
-                  animate={["initial", isDark ? "dark" : "light"]}
+                  animate={["initial", isDark ? "dark" : "light"]} 
+                  whileTap={"tap"} 
                   className="group relative py-2 cursor-pointer"
                   onClick={() => toggleTheme()}
       >
         <motion.div
-          whileTap={{ scale: 0.9 }}
-          initial={false}
+          initial={false} 
           variants={{
             initial: {
               scale: 1,
               borderRadius: 24
+            },
+            tap: {
+              scale: 0.9
             },
             hover: {
               scale: 1.1,
@@ -209,8 +212,18 @@ const SideBar = () => {
             borderRadius: { type: "spring", bounce: 0.75 }
           }}
 
-          className="flex mx-auto h-12 w-12 items-center justify-center shadow-md">
-          {isDark ? <FaMoon size={28} /> : <FaSun size={28} />}
+          className="flex mx-auto h-12 w-12 overflow-hidden justify-center shadow-md">
+          <motion.div 
+            className="flex flex-col h-[180%] justify-evenly"
+            variants={{
+              dark: {
+                rotateZ: 180,
+              },
+            }}
+          >
+        <FaSun size={28} />
+        <FaMoon className="rotate-180"  size={28} /> 
+          </motion.div>
         </motion.div>
         <motion.div
           variants={{
