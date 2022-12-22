@@ -4,6 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
 import { createElement } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Home: NextPage = () => {
   return (
@@ -27,7 +28,9 @@ const Home: NextPage = () => {
             href="https://www.linkedin.com/in/keisuke-hara/"
             rel="noreferrer">
             <div className="group flex items-center justify-center">
-              <img
+              <Image
+                width='100%'
+                height='100%'
                 className="rounded-full duration-200 ease-linear group-hover:blur-sm"
                 src={profile.src}
                 alt="prof-pic"
