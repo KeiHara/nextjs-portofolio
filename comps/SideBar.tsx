@@ -94,7 +94,7 @@ const SideBar = () => {
           />
         </a>
       </Link>
-      <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank">
+      <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank" rel="noreferrer">
         <SideBarIcon
           icon={(props) => <FaGithub size={28} />}
           toggled={toggledSideBarIcon[3]}
@@ -167,31 +167,89 @@ const SideBar = () => {
           }}
           className="flex min-w-max items-center rounded-md bg-neutral-100 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
           <div className="absolute left-0 -translate-x-full inline-block w-2 overflow-hidden">
-            <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
+            <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-100 dark:bg-zinc-800"></div>
           </div>
           {isOnLeft ? "Move to right" : "Move to left"}
         </ motion.span>
       </motion.div>
 
-      <div
-        onClick={() => toggleTheme()}
-        className={`group relative mx-auto mb-2 mt-auto flex  h-12 w-12 cursor-pointer items-center justify-center rounded-3xl shadow-md duration-200 ease-linear hover:rounded-xl sm:mt-2 ${
-          isDark
-            ? "bg-purple-500 hover:bg-purple-600"
-            : "bg-orange-400 hover:bg-orange-500"
-        } `}>
-        <div
-          className="absolute left-[-16px] h-2 w-1 origin-left scale-0 rounded-r-full  bg-black duration-300 group-hover:h-5 group-hover:scale-100 dark:bg-white"></div>
-        {isDark ? <FaMoon size={28} /> : <FaSun size={28} />}
+    {/* theme button */}
+      <motion.div whileHover={["hover", isDark ? "darkHighlight" : "lightHighlight"]}
+                  animate={["initial", isDark ? "dark" : "light"]}
+                  className="group relative py-2 cursor-pointer"
+                  onClick={() => toggleTheme()}
+      >
+        <motion.div
+          whileTap={{ scale: 0.9 }}
+          initial={false}
+          variants={{
+            initial: {
+              scale: 1,
+              borderRadius: 24
+            },
+            hover: {
+              scale: 1.1,
+              borderRadius: 12
+            },
+            dark: {
+              backgroundColor: "rgb(168 85 247)"
+            },
+            light: {
+              backgroundColor: "rgb(251 146 60)"
+            },
+            darkHighlight: {
+              backgroundColor: "rgb(147 51 234)"
+            },
+            lightHighlight: {
+              backgroundColor: "rgb(249 115 22)"
+            }
+          }}
+          transition={{
+            scale: { type: "spring", bounce: 0.75 },
+            borderRadius: { type: "spring", bounce: 0.75 }
+          }}
 
-        <span
-          className="absolute left-14 m-4 flex min-w-max origin-left scale-0 items-center rounded-md bg-neutral-200 p-2 text-sm font-bold shadow-md duration-100 group-hover:scale-100 dark:bg-zinc-800">
-          <div className="absolute left-[-7px] inline-block w-2 overflow-hidden">
-            <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-200 dark:bg-zinc-800"></div>
+          className="flex mx-auto h-12 w-12 items-center justify-center shadow-md">
+          {isDark ? <FaMoon size={28} /> : <FaSun size={28} />}
+        </motion.div>
+        <motion.div
+          variants={{
+            hover: {
+              height: "1.25rem"
+            },
+            darkHighlight: {
+              backgroundColor: "rgb(255 255 255)"
+            },
+            lightHighlight: {
+              backgroundColor: "rgb(0 0 0)"
+            }
+          }}
+          transition={{
+            duration: 0.2,
+            ease: "easeInOut"
+          }}
+          className={`absolute top-1/2 w-1 -translate-y-1/2 origin-left rounded-r-full`}></motion.div>
+        <motion.span
+          variants={{
+            hover: {
+              scale: 1
+            }
+          }}
+          style={{
+            originX: 0,
+            scale: 0,
+            position: "absolute",
+            top: "50%",
+            translateY: "-50%",
+            left: "120%"
+          }}
+          className="flex min-w-max items-center rounded-md bg-neutral-100 p-2 text-sm font-bold shadow-md dark:bg-zinc-800">
+          <div className="absolute left-0 -translate-x-full inline-block w-2 overflow-hidden">
+            <div className="h-3 origin-top-right -rotate-45 transform bg-neutral-100 dark:bg-zinc-800"></div>
           </div>
-          change theme
-        </span>
-      </div>
+          Change theme
+        </ motion.span>
+      </motion.div>
     </div>
   );
 };
