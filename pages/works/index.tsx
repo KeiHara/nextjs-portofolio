@@ -15,7 +15,7 @@ const Works = () => {
           className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
-        <div className="grid justify-items-center gap-16 lg:grid-cols-2 lg:gap-4">
+        <div className="grid justify-items-center gap-8 lg:grid-cols-2 lg:gap-4">
           {works.map((work, i) => (
             <WorkCard
               key={i}
