@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { motion, Transition, Variants } from "framer-motion";
 
-interface SideBarIconProps {
+interface SideBarIcon {
   icon: IconType;
   toggled: boolean;
   isDark: boolean;
@@ -76,7 +76,7 @@ const SideBar = () => {
       <Link href="/">
         <a>
           <SideBarIcon
-            icon={(props) => <BiUserCircle size={28} />}
+            icon={() => <BiUserCircle size={28} />}
             text="About me"
             toggled={toggledSideBarIcon[0]}
             isDark={isDark}
@@ -87,7 +87,7 @@ const SideBar = () => {
       <Link href="/works">
         <a>
           <SideBarIcon
-            icon={(props) => <MdWorkOutline size={28} />}
+            icon={() => <MdWorkOutline size={28} />}
             toggled={toggledSideBarIcon[1]}
             text="My works"
             isDark={isDark}
@@ -96,7 +96,7 @@ const SideBar = () => {
       </Link>
       <a href="https://github.com/KeiHara/nextjs-portofolio" target="_blank" rel="noreferrer">
         <SideBarIcon
-          icon={(props) => <FaGithub size={28} />}
+          icon={() => <FaGithub size={28} />}
           toggled={toggledSideBarIcon[3]}
           text="Source"
           isDark={isDark}
@@ -272,7 +272,7 @@ const SideBarIcon = ({
                        toggled,
                        isDark,
                        text = "tooltip 😀"
-                     }: SideBarIconProps) => {
+                     }: SideBarIcon) => {
   return (
     <motion.div whileHover={[!toggled ? "hover" : "", isDark ? "darkHighlight" : "lightHighlight"]}
                 animate={toggled ? ["toggled", isDark ? "darkHighlight" : "lightHighlight"] : ["unToggled", isDark ? "dark" : "light"]}

@@ -65,7 +65,7 @@ const BottomNav = () => {
 
   return (
     <div
-      className="flex h-[4.5rem] w-full items-center justify-evenly bg-neutral-200/50 shadow-sm backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
+      className="flex rounded-t-3xl h-[4.5rem] w-full items-center justify-evenly bg-neutral-200/50 shadow-sm backdrop-blur-md dark:bg-zinc-800/50 dark:text-white
         ">
       <Link href="/">
         <a className="h-full">
@@ -242,7 +242,7 @@ const SideBarIcon = ({
           duration: 0.2,
           ease: 'easeInOut',
         }}
-        className={`absolute bottom-0 h-1 origin-bottom -translate-x-1/2 left-2/4 rounded-r-full bg-sky-300 dark:bg-teal-300`}></motion.div>
+        className={`absolute bottom-0 h-1 origin-bottom -translate-x-1/2 left-2/4 rounded-t-full bg-sky-300 dark:bg-teal-300`}></motion.div>
     </motion.div>
   );
 };
