@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import worksJson from './works.json';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 const Works = () => {
   const works = worksJson;
@@ -53,6 +54,7 @@ const WorkCard = ({
   imgSrcs,
   href,
 }: workCardProps) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <motion.a
       whileHover={'hover'}
@@ -67,13 +69,14 @@ const WorkCard = ({
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
               <motion.img
+                onLoad={() => setIsLoaded(true)}
                 variants={{
                   hover: {
                     scale: 1.05,
                   },
                 }}
                 key={i}
-                className="rounded-md"
+                className={`rounded-md ${ !isLoaded ?? 'blur-sm' }}`}
                 src={src}
                 alt="img"
               />
