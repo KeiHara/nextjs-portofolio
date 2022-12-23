@@ -74,7 +74,7 @@ const SideBar = () => {
           : "sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]"
       }`}>
       <Link href="/">
-        <a>
+        <a draggable={false}>
           <SideBarIcon
             icon={() => <BiUserCircle size={28} />}
             text="About me"
@@ -85,7 +85,7 @@ const SideBar = () => {
       </Link>
       <hr className="mx-5 rounded-full border border-gray-100 bg-gray-100 dark:border-zinc-700 dark:bg-zinc-700" />
       <Link href="/works">
-        <a>
+        <a draggable={false}>
           <SideBarIcon
             icon={() => <MdWorkOutline size={28} />}
             toggled={toggledSideBarIcon[1]}

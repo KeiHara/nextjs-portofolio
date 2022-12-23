@@ -57,6 +57,7 @@ const WorkCard = ({
   const [isLoaded, setIsLoaded] = useState(false);
   return (
     <motion.a
+      draggable={false}
       whileHover={'hover'}
       className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800"
       target="_blank"
@@ -79,6 +80,7 @@ const WorkCard = ({
                 className={`rounded-md ${ !isLoaded ?? 'blur-sm' }}`}
                 src={src}
                 alt="img"
+                draggable={false}
               />
             ))
           ) : (
@@ -91,6 +93,7 @@ const WorkCard = ({
               className="rounded-md"
               src={imgSrc}
               alt="img"
+              draggable={false}
             />
           )}
         </div>

@@ -33,6 +33,7 @@ const Home: NextPage = () => {
         {/* prof pic */}
         <div className="flex h-fit w-24 overflow-hidden rounded-full border-2">
           <a
+            draggable={false}
             target="_blank"
             href="https://www.linkedin.com/in/keisuke-hara/"
             rel="noreferrer">
@@ -43,6 +44,7 @@ const Home: NextPage = () => {
                 className="rounded-full duration-200 ease-linear group-hover:blur-sm"
                 src={profile.src}
                 alt="prof-pic"
+                draggable={false}
               />
               <FaLinkedin
                 className="invisible absolute text-white opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100"
@@ -64,6 +66,7 @@ const Home: NextPage = () => {
           actively. He is currently working as a Frontend engineer / Mobile app
           developer at{' '}
           <a
+            draggable={false}
             className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
             href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
             target="_blank"
@@ -91,6 +94,7 @@ const Home: NextPage = () => {
           <p className="dark:text-white">
             Working as a frontend engineer at{' '}
             <a
+              draggable={false}
               className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
               target="_blank"
@@ -104,6 +108,7 @@ const Home: NextPage = () => {
             Working as a Frontend engineer at University of Auckland helping a
             research project called&nbsp;
             <a
+              draggable={false}
               className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://habits.school/"
               target="_blank"
@@ -155,6 +160,7 @@ interface mediaLinkProps {
 
 const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => (
   <a
+  draggable={false}
     target="_blank"
     href={mediaLink}
     className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20"
