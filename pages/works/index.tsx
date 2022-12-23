@@ -1,18 +1,24 @@
-import Head from "next/head";
-import worksJson from "./works.json";
-import { motion } from "framer-motion";
+import Head from 'next/head';
+import worksJson from './works.json';
+import { motion } from 'framer-motion';
 
 const Works = () => {
   const works = worksJson;
 
   return (
-    <div className="mx-3 max-w-sm  lg:max-w-2xl">
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, x: 0, y: 200 },
+        enter: { opacity: 1, x: 0, y: 0 },
+      }}
+      initial="hidden"
+      animate="enter"
+      className="mx-3 max-w-sm  lg:max-w-2xl">
       <Head>
         <title>My works</title>
       </Head>
       <div className="flex w-full flex-col items-center">
-        <h3
-          className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
+        <h3 className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
           Work
         </h3>
         <div className="grid justify-items-center gap-8 lg:grid-cols-2 lg:gap-4">
@@ -28,7 +34,7 @@ const Works = () => {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -41,30 +47,30 @@ interface workCardProps {
 }
 
 const WorkCard = ({
-                    imgSrc,
-                    title,
-                    description,
-                    imgSrcs,
-                    href
-                  }: workCardProps) => {
+  imgSrc,
+  title,
+  description,
+  imgSrcs,
+  href,
+}: workCardProps) => {
   return (
     <motion.a
-      whileHover={"hover"}
+      whileHover={'hover'}
       className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800"
       target="_blank"
       href={href}>
       <div>
         <div
           className={`flex h-36 ${
-            imgSrcs ? "justify-between" : "justify-center"
+            imgSrcs ? 'justify-between' : 'justify-center'
           }`}>
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
               <motion.img
                 variants={{
                   hover: {
-                    scale: 1.05
-                  }
+                    scale: 1.05,
+                  },
                 }}
                 key={i}
                 className="rounded-md"
@@ -76,8 +82,8 @@ const WorkCard = ({
             <motion.img
               variants={{
                 hover: {
-                  scale: 1.05
-                }
+                  scale: 1.05,
+                },
               }}
               className="rounded-md"
               src={imgSrc}

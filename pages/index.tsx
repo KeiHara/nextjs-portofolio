@@ -5,10 +5,19 @@ import { IconType } from 'react-icons/lib';
 import { createElement } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Home: NextPage = () => {
   return (
-    <div className="mx-3 max-w-sm  lg:max-w-2xl">
+    <motion.div
+      className="mx-3 max-w-sm  lg:max-w-2xl"
+      variants={{
+        hidden: { opacity: 0, x: 0, y: 200 },
+        enter: { opacity: 1, x: 0, y: 0 },
+      }}
+      initial="hidden"
+      animate="enter"
+      >
       <Head>
         <title>Keisuke Hara | About me</title>
       </Head>
@@ -29,8 +38,8 @@ const Home: NextPage = () => {
             rel="noreferrer">
             <div className="group flex items-center justify-center">
               <Image
-                width='100%'
-                height='100%'
+                width="100%"
+                height="100%"
                 className="rounded-full duration-200 ease-linear group-hover:blur-sm"
                 src={profile.src}
                 alt="prof-pic"
@@ -134,7 +143,7 @@ const Home: NextPage = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

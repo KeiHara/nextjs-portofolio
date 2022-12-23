@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import VoxelDogLoader from './voxel-dog-loader';
 import BottomNav from "./BottomNav";
+import { motion } from 'framer-motion';
 interface props {
   children: JSX.Element;
 }
