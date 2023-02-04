@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import profile from '../public/profile_pic.jpg';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { IconType } from 'react-icons/lib';
-import { createElement } from 'react';
+import { createElement, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -158,20 +158,23 @@ interface mediaLinkProps {
   text: string;
 }
 
-const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => (
-  <a
-  draggable={false}
+const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => {
+  return (
+    <a
+    draggable={false}
     target="_blank"
     href={mediaLink}
     className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20"
     rel="noreferrer">
-    <div className="text-sky-700 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
-      {createElement(icon)}
-    </div>
-    <p className="ml-2 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 group-hover:text-sky-600 group-hover:after:scale-100  group-hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 dark:group-hover:text-teal-200 dark:group-hover:after:bg-teal-200">
-      {text}
-    </p>
-  </a>
-);
+      <div className="text-sky-700 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
+        {createElement(icon)}
+      </div>
+      <p className="ml-2 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 group-hover:text-sky-600 group-hover:after:scale-100  group-hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 dark:group-hover:text-teal-200 dark:group-hover:after:bg-teal-200">
+        {text}
+      </p>
+    </a>
+  )
+  
+};
 
 export default Home;
