@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           About
         </h3>
         <p className="text-justify tracking-wide dark:text-white">
-          Keisuke is a penultimate student studying a Bachelor of Science at the
+          Keisuke is a final year student studying a Bachelor of Science at the
           University of Auckland, majoring in Computer Science. He is passionate
           about taking on opportunities to improve his web development skills
           actively. He is currently working as a Frontend engineer / Mobile app
