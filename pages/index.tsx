@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';
-import profile from '../public/profile_pic.jpg';
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { IconType } from 'react-icons/lib';
-import { createElement, useEffect } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import type { NextPage } from 'next'
+import profile from '../public/profile_pic.jpg'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { IconType } from 'react-icons/lib'
+import { createElement } from 'react'
+import Head from 'next/head'
+import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       }}
       initial="hidden"
       animate="enter"
-      >
+    >
       <Head>
         <title>Keisuke Hara | About me</title>
       </Head>
@@ -36,7 +36,8 @@ const Home: NextPage = () => {
             draggable={false}
             target="_blank"
             href="https://www.linkedin.com/in/keisuke-hara/"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             <div className="group flex items-center justify-center">
               <Image
                 width="100%"
@@ -70,7 +71,8 @@ const Home: NextPage = () => {
             className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
             href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
             target="_blank"
-            rel="noreferrer">
+            rel="noreferrer"
+          >
             Kekeno Tech
           </a>
           , developing a variety of projects.
@@ -98,7 +100,8 @@ const Home: NextPage = () => {
               className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://stage-dot-kekeno-site.ts.r.appspot.com/"
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+            >
               Kekeno Tech
             </a>
           </p>
@@ -112,7 +115,8 @@ const Home: NextPage = () => {
               className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://habits.school/"
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+            >
               Habits
             </a>
           </p>
@@ -132,40 +136,41 @@ const Home: NextPage = () => {
         </h3>
         <div className="flex flex-col">
           <MediaLink
-            icon={(props) => <FaLinkedin />}
+            icon={() => <FaLinkedin />}
             text="@keisuke-hara"
             mediaLink="https://www.linkedin.com/in/keisuke-hara/"
           />
           <MediaLink
-            icon={(props) => <FaGithub />}
+            icon={() => <FaGithub />}
             text="@keiHara"
             mediaLink="https://github.com/KeiHara"
           />
           <MediaLink
-            icon={(props) => <FaInstagram />}
+            icon={() => <FaInstagram />}
             text="@kei.9241"
             mediaLink="https://www.instagram.com/kei.9241/"
           />
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 interface mediaLinkProps {
-  icon: IconType;
-  mediaLink: string;
-  text: string;
+  icon: IconType
+  mediaLink: string
+  text: string
 }
 
 const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => {
   return (
     <a
-    draggable={false}
-    target="_blank"
-    href={mediaLink}
-    className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20"
-    rel="noreferrer">
+      draggable={false}
+      target="_blank"
+      href={mediaLink}
+      className="group flex w-fit items-center rounded-md py-2 px-3 duration-200 ease-linear hover:bg-sky-200 hover:bg-opacity-60 dark:hover:bg-teal-200 dark:hover:bg-opacity-20"
+      rel="noreferrer"
+    >
       <div className="text-sky-700 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
         {createElement(icon)}
       </div>
@@ -174,7 +179,6 @@ const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => {
       </p>
     </a>
   )
-  
-};
+}
 
-export default Home;
+export default Home
