@@ -1,9 +1,9 @@
 [
   {
     "imgSrcs": [
-      "work_imgs/headstrong1.png",
-      "work_imgs/headstrong2.png",
-      "work_imgs/headstrong3.png"
+      "work_imgs/headstrong/headstrong1.png",
+      "work_imgs/headstrong/headstrong2.png",
+      "work_imgs/headstrong/headstrong3.png"
     ],
     "href": "https://play.google.com/store/apps/details?id=nz.co.uniservices.habitsmessenger",
     "imgSrc": "",
@@ -13,36 +13,41 @@
   {
     "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
     "imgSrcs": [
-      "work_imgs/ida1.png",
-      "work_imgs/ida2.png",
-      "work_imgs/ida3.png"
+      "work_imgs/ida/ida1.png",
+      "work_imgs/ida/ida2.png",
+      "work_imgs/ida/ida3.png"
     ],
     "imgSrc": "work_imgs/ida.png",
     "title": "IDA",
     "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors."
   },
   {
+    "imgSrcs": [
+      "work_imgs/mmca/mmca1.png",
+      "work_imgs/mmca/mmca2.png",
+      "work_imgs/mmca/mmca3.png"
+    ],
+    "href": "",
+    "imgSrc": "",
+    "title": "MMCA",
+    "description": "A mobile app for mood tracking which can be monitored on the Habits platform."
+  },
+  {
     "href": "https://habits.school/",
-    "imgSrc": "work_imgs/habits.png",
+    "imgSrc": "work_imgs/habits/habits.png",
     "title": "Habits",
     "description": "A web application that tracks the participant's mental health and engagement (Government-funded research)."
   },
   {
     "href": "https://devs.org.nz",
-    "imgSrc": "work_imgs/devs.png",
+    "imgSrc": "work_imgs/devs/devs.png",
     "title": "Devs",
     "description": "An Website for the University of Auckland's biggest Software Development Club."
   },
   {
     "href": "https://www.tekaha.co.nz/",
-    "imgSrc": "work_imgs/tekaha.png",
+    "imgSrc": "work_imgs/tekaha/tekaha.png",
     "title": "Tekaha",
     "description": "A platform for the Tekaha community to connect and socialize."
-  },
-  {
-    "href": "https://taskerr-c3026.web.app/",
-    "imgSrc": "work_imgs/taskerr.png",
-    "title": "Taskerr",
-    "description": "Task tracking platform aiming to solve the problem of procrastination."
   }
 ]
