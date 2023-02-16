@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import worksJson from './works.json';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import Head from 'next/head'
+import worksJson from './works.json'
+import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 const Works = () => {
-  const works = worksJson;
+  const works = worksJson
 
   return (
     <motion.div
@@ -14,7 +14,8 @@ const Works = () => {
       }}
       initial="hidden"
       animate="enter"
-      className="mx-3 max-w-sm  lg:max-w-2xl">
+      className="mx-3 max-w-sm  lg:max-w-2xl"
+    >
       <Head>
         <title>My works</title>
       </Head>
@@ -36,15 +37,15 @@ const Works = () => {
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 interface workCardProps {
-  href: string;
-  imgSrcs?: string[];
-  imgSrc: string;
-  title: string;
-  description: string;
+  href: string
+  imgSrcs?: string[]
+  imgSrc: string
+  title: string
+  description: string
 }
 
 const WorkCard = ({
@@ -54,30 +55,38 @@ const WorkCard = ({
   imgSrcs,
   href,
 }: workCardProps) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
   return (
     <motion.a
       draggable={false}
       whileHover={'hover'}
       className="group rounded-md p-4 hover:bg-neutral-200 dark:hover:bg-zinc-800"
       target="_blank"
-      href={href}>
+      variants={{
+        hover: {
+          boxShadow:
+            '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        },
+      }}
+      href={href}
+    >
       <div>
         <div
           className={`flex h-36 ${
             imgSrcs ? 'justify-between' : 'justify-center'
-          }`}>
+          }`}
+        >
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
               <motion.img
                 onLoad={() => setIsLoaded(true)}
+                key={i}
                 variants={{
                   hover: {
                     scale: 1.05,
                   },
                 }}
-                key={i}
-                className={`rounded-md ${ !isLoaded ?? 'blur-sm' }}`}
+                className={`rounded-md ${!isLoaded ?? 'blur-sm'}}`}
                 src={src}
                 alt="img"
                 draggable={false}
@@ -99,11 +108,21 @@ const WorkCard = ({
         </div>
       </div>
       <div className="mt-5 flex flex-col content-center items-center">
-        <h1 className="text-4xl font-bold dark:text-white">{title}</h1>
-        <p className="text-center dark:text-white">{description}</p>
+        <motion.h1
+          variants={{ hover: { scale: 1.05 } }}
+          className="text-4xl font-bold dark:text-white"
+        >
+          {title}
+        </motion.h1>
+        <motion.p
+          variants={{ hover: { scale: 1.05 } }}
+          className="text-center dark:text-white"
+        >
+          {description}
+        </motion.p>
       </div>
     </motion.a>
-  );
-};
+  )
+}
 
-export default Works;
+export default Works
