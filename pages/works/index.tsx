@@ -1,17 +1,13 @@
 import Head from 'next/head'
 import worksJson from './works.json'
-import {
-  MotionValue,
-  motion,
-  useElementScroll,
-  useScroll,
-  useTransform,
-} from 'framer-motion'
-import { useRef, useState } from 'react'
+import { MotionValue, motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 
 const Works = () => {
   const works = worksJson
   const worksContainerRef = useRef<HTMLDivElement>(null)
+  const webappContainerRef = useRef<HTMLDivElement>(null)
+  const appContainerRef = useRef<HTMLDivElement>(null)
   const { scrollXProgress } = useScroll({
     container: worksContainerRef,
   })
@@ -62,7 +58,10 @@ const Works = () => {
           ref={worksContainerRef}
           className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto"
         >
-          <motion.div className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4">
+          <motion.div
+            ref={webappContainerRef}
+            className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
+          >
             {works
               .filter((work) => work.type === 'website')
               .map((work, i) => (
@@ -76,7 +75,10 @@ const Works = () => {
                 />
               ))}
           </motion.div>
-          <motion.div className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4">
+          <motion.div
+            ref={appContainerRef}
+            className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4"
+          >
             {works
               .filter((work) => work.type === 'app')
               .map((work, i) => (
