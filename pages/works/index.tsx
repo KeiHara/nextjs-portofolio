@@ -44,13 +44,13 @@ const Works = () => {
               style={{ y }}
               className="w-fit text-xl font-bold text-black dark:text-white"
             >
-              Webapp
+              Website
             </motion.h3>
             <motion.h3
               style={{ y }}
               className="w-fit text-xl font-bold text-black dark:text-white"
             >
-              App
+              Mobile App
             </motion.h3>
           </div>
         </div>
