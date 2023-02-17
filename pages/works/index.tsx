@@ -20,13 +20,13 @@ const Works = () => {
 
   return (
     <motion.div
+      className="mx-3 max-w-sm overflow-x-hidden lg:max-w-2xl"
       variants={{
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 },
       }}
       initial="hidden"
       animate="enter"
-      className="mx-3 max-w-sm  lg:max-w-2xl"
     >
       <Head>
         <title>My works</title>
