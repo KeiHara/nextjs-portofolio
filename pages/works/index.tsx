@@ -1,10 +1,26 @@
 import Head from 'next/head'
 import worksJson from './works.json'
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import {
+  MotionValue,
+  motion,
+  useElementScroll,
+  useScroll,
+  useTransform,
+} from 'framer-motion'
+import { useRef, useState } from 'react'
 
 const Works = () => {
   const works = worksJson
+  const worksContainerRef = useRef<HTMLDivElement>(null)
+  const { scrollXProgress } = useScroll({
+    container: worksContainerRef,
+  })
+
+  const useParallax = (value: MotionValue<number>, distance: number) => {
+    return useTransform(value, [0, 1], [0, -distance])
+  }
+
+  const y = useParallax(scrollXProgress, 28)
 
   return (
     <motion.div
@@ -20,11 +36,33 @@ const Works = () => {
         <title>My works</title>
       </Head>
       <div className="flex w-full flex-col items-center">
-        <h3 className="mb-2 w-fit self-start text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
-          Work
-        </h3>
-        <div className="scrollbar flex w-full overflow-x-auto">
-          <div className="grid h-fit min-w-full gap-8 lg:grid-cols-2 lg:gap-4">
+        <div className="mb-2 flex w-full">
+          <h3 className="w-fit text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
+            Work
+          </h3>
+          <h3 className="mx-2 w-fit text-xl font-bold text-black dark:text-white">
+            -
+          </h3>
+          <div className="h-7 overflow-hidden">
+            <motion.h3
+              style={{ y }}
+              className="w-fit text-xl font-bold text-black dark:text-white"
+            >
+              Webapp
+            </motion.h3>
+            <motion.h3
+              style={{ y }}
+              className="w-fit text-xl font-bold text-black dark:text-white"
+            >
+              App
+            </motion.h3>
+          </div>
+        </div>
+        <motion.div
+          ref={worksContainerRef}
+          className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto"
+        >
+          <motion.div className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4">
             {works
               .filter((work) => work.type === 'website')
               .map((work, i) => (
@@ -37,8 +75,8 @@ const Works = () => {
                   description={work.description}
                 />
               ))}
-          </div>
-          <div className="grid h-fit min-w-full gap-8 lg:grid-cols-2 lg:gap-4">
+          </motion.div>
+          <motion.div className="grid h-fit min-w-full snap-center gap-8 lg:grid-cols-2 lg:gap-4">
             {works
               .filter((work) => work.type === 'app')
               .map((work, i) => (
@@ -51,8 +89,8 @@ const Works = () => {
                   description={work.description}
                 />
               ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </motion.div>
   )
