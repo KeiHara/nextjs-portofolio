@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import worksJson from './works.json'
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const Works = () => {
   const works = worksJson
