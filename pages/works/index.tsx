@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import worksJson from './works.json'
 import { MotionValue, motion, useScroll, useTransform } from 'framer-motion'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Works = () => {
   const works = worksJson
+  const titleRef = useRef<HTMLDivElement>(null)
   const worksContainerRef = useRef<HTMLDivElement>(null)
   const webappContainerRef = useRef<HTMLDivElement>(null)
   const appContainerRef = useRef<HTMLDivElement>(null)
+  const [isApp, setIsApp] = useState(false)
   const { scrollXProgress } = useScroll({
     container: worksContainerRef,
   })
@@ -17,6 +19,30 @@ const Works = () => {
   }
 
   const y = useParallax(scrollXProgress, 28)
+
+  useEffect(() => {
+    scrollXProgress.onChange((value) => {
+      if (value === 0) {
+        setIsApp(false)
+      } else if (value === 1) {
+        setIsApp(true)
+      }
+    })
+  })
+
+  const toggleWorkType = () => {
+    if (isApp) {
+      worksContainerRef.current?.scroll({
+        left: 0,
+        behavior: 'smooth',
+      })
+    } else {
+      worksContainerRef.current?.scroll({
+        left: worksContainerRef.current.offsetWidth,
+        behavior: 'smooth',
+      })
+    }
+  }
 
   return (
     <motion.div
@@ -39,7 +65,11 @@ const Works = () => {
           <h3 className="mx-2 w-fit text-xl font-bold text-black dark:text-white">
             -
           </h3>
-          <div className="h-7 overflow-hidden">
+          <div
+            onClick={() => toggleWorkType()}
+            ref={titleRef}
+            className="h-7 overflow-hidden"
+          >
             <motion.h3
               style={{ y }}
               className="w-fit text-xl font-bold text-black dark:text-white"
