@@ -1,5 +1,22 @@
 [
   {
+    "href": "https://play.google.com/store/apps/details?id=com.kekeno.ida",
+    "imgSrcs": [
+      "work_imgs/ida/ida-app1.png",
+      "work_imgs/ida/ida-app2.png",
+      "work_imgs/ida/ida-app3.png"
+    ],
+    "imgSrc": "work_imgs/ida.png",
+    "title": "IDA App",
+    "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors."
+  },
+  {
+    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
+    "imgSrc": "work_imgs/ida/ida-survey-page.png",
+    "title": "IDA Survey",
+    "description": "A survey platform and admin dashboard for the IDA project."
+  },
+  {
     "imgSrcs": [
       "work_imgs/headstrong/headstrong1.png",
       "work_imgs/headstrong/headstrong2.png",
@@ -9,17 +26,6 @@
     "imgSrc": "",
     "title": "Headstrong",
     "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform."
-  },
-  {
-    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
-    "imgSrcs": [
-      "work_imgs/ida/ida1.png",
-      "work_imgs/ida/ida2.png",
-      "work_imgs/ida/ida3.png"
-    ],
-    "imgSrc": "work_imgs/ida.png",
-    "title": "IDA",
-    "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors."
   },
   {
     "imgSrcs": [
