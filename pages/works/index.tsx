@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const Works = () => {
   const works = worksJson
-  const titleRef = useRef<HTMLDivElement>(null)
+  const titleRef = useRef<HTMLButtonElement>(null)
   const worksContainerRef = useRef<HTMLDivElement>(null)
   const webappContainerRef = useRef<HTMLDivElement>(null)
   const appContainerRef = useRef<HTMLDivElement>(null)
@@ -65,10 +65,10 @@ const Works = () => {
           <h3 className="mx-2 w-fit text-xl font-bold text-black dark:text-white">
             -
           </h3>
-          <div
+          <button
             onClick={() => toggleWorkType()}
             ref={titleRef}
-            className="h-7 overflow-hidden"
+            className="h-7 cursor-pointer overflow-hidden"
           >
             <motion.h3
               style={{ y }}
@@ -82,7 +82,7 @@ const Works = () => {
             >
               Mobile App
             </motion.h3>
-          </div>
+          </button>
         </div>
         <motion.div
           ref={worksContainerRef}
