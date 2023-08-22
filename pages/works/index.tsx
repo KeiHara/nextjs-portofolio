@@ -64,10 +64,10 @@ const Works = () => {
       <div className="flex w-full flex-col items-center">
         <div className="mb-2 mt-3 flex w-full">
           <h3
-            className="w-fit text-xl font-bold text-neutral-700 after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+            className="w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
             Work
           </h3>
-          <h3 className="mx-2 w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700">
+          <h3 className="mx-2 w-fit text-xl font-bold dark:text-white text-neutral-700">
             -
           </h3>
           <motion.div className="group relative" whileHover="hover">
@@ -101,13 +101,13 @@ const Works = () => {
             >
               <motion.h3
                 style={{ y }}
-                className="w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700"
+                className="w-fit text-xl font-bold dark:text-white text-neutral-700"
               >
                 Website
               </motion.h3>
               <motion.h3
                 style={{ y }}
-                className="w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700"
+                className="w-fit text-xl font-bold dark:text-white text-neutral-700"
               >
                 Mobile App
               </motion.h3>

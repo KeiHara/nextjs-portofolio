@@ -58,7 +58,7 @@ const Home: NextPage = () => {
       {/* About */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold text-neutral-700 after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
           About
         </h3>
         <p className="text-justify tracking-wide dark:text-white text-neutral-700">
