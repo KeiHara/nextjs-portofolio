@@ -116,7 +116,7 @@ const Works = () => {
         </div>
         <motion.div
           ref={worksContainerRef}
-          className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto"
+          className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto py-4"
         >
           <motion.div
             ref={webappContainerRef}
