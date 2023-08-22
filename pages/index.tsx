@@ -25,8 +25,8 @@ const Home: NextPage = () => {
       {/* Intro */}
       <div className="flex justify-between pt-4">
         <div>
-          <h1 className="text-4xl font-bold  dark:text-neutral-200 text-neutral-700">Keisuke Hara</h1>
-          <p className="dark:text-neutral-200 text-neutral-700">
+          <h1 className="text-4xl font-bold  dark:text-neutral-200 text-neutral-800">Keisuke Hara</h1>
+          <p className="dark:text-neutral-200 text-neutral-800">
             Software Engineer (Frontend Engineer / Musician)
           </p>
         </div>
@@ -58,10 +58,10 @@ const Home: NextPage = () => {
       {/* About */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
           About
         </h3>
-        <p className="text-justify tracking-wide dark:text-neutral-200 text-neutral-700">
+        <p className="text-justify tracking-wide dark:text-neutral-200 text-neutral-800">
           Keisuke is a final year student studying a Bachelor of Science at the
           University of Auckland, majoring in Computer Science. He is passionate
           about taking on opportunities to improve his web development skills
@@ -82,20 +82,20 @@ const Home: NextPage = () => {
       {/* Bio */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
           Bio
         </h3>
         <div className="grid grid-cols-[1fr_3fr] gap-4">
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2003</div>
-          <p className="dark:text-neutral-200 text-neutral-700">Born in Tokyo (東京), Japan.</p>
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2003</div>
+          <p className="dark:text-neutral-200 text-neutral-800">Born in Tokyo (東京), Japan.</p>
 
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2021</div>
-          <p className="dark:text-neutral-200 text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2021</div>
+          <p className="dark:text-neutral-200 text-neutral-800">
             Started studying Computer Science at University of Auckland
           </p>
 
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2021 to present</div>
-          <p className="dark:text-neutral-200 text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2021 to present</div>
+          <p className="dark:text-neutral-200 text-neutral-800">
             Working as a frontend engineer at{" "}
             <a
               draggable={false}
@@ -108,8 +108,8 @@ const Home: NextPage = () => {
             </a>
           </p>
 
-          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2022 Summer</div>
-          <p className="dark:text-neutral-200 text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2022 Summer</div>
+          <p className="dark:text-neutral-200 text-neutral-800">
             Working as a Frontend engineer at University of Auckland helping a
             research project called&nbsp;
             <a
@@ -127,15 +127,15 @@ const Home: NextPage = () => {
       {/* Hobbies */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
           I ❤️
         </h3>
-        <p className="dark:text-neutral-200 text-neutral-700">Game, music, piano, UI/UX</p>
+        <p className="dark:text-neutral-200 text-neutral-800">Game, music, piano, UI/UX</p>
       </div>
       {/* Social media */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-800 after:dark:bg-zinc-500">
           On the web
         </h3>
         <div className="flex flex-col">
