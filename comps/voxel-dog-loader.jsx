@@ -20,7 +20,7 @@ export const DogSpinner = () => {
 export const DogContainer = forwardRef(({ children }, ref) => (
   <div
     ref={ref}
-    className="relative mx-auto mb-[-100px] h-[300px] w-[300px]  sm:mt-[-200px] sm:mb-[-220px] sm:h-[640px] sm:w-[640px]">
+    className="relative mx-auto mb-[-100px] h-[300px] w-[300px] mt-[-30px] sm:mt-[-200px] sm:mb-[-220px] sm:h-[640px] sm:w-[640px]">
     {children}
   </div>
 ));
