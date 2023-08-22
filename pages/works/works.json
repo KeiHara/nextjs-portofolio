@@ -4,14 +4,79 @@
     "imgSrc": "work_imgs/musescore-scraper/musescore-scraper.png",
     "title": "Musescore scraper",
     "description": "A website where you can download any musescore music sheet for free",
-    "type": "website"
+    "type": "website",
+    "icons": [
+      "svelte.svg",
+      "tailwind.svg",
+      "daisyui.svg",
+      "puppeteer.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
   },
   {
     "href": "https://youthchat.co.nz/",
     "imgSrc": "work_imgs/youthchat/youthchat.png",
     "title": "Youthchat",
     "description": "An Electronic Case Finding and Help Assessment Tool for Youth",
-    "type": "website"
+    "type": "website",
+    "icons": [
+      "dotnet.svg",
+      "tailwind.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
+  },
+  {
+    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
+    "imgSrc": "work_imgs/ida/ida-survey-page.png",
+    "title": "IDA Survey",
+    "description": "A survey platform and admin dashboard for the IDA project.",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "tailwind.svg",
+      "daisyui.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
+  },
+  {
+    "href": "https://habits.school/",
+    "imgSrc": "work_imgs/habits/habits.png",
+    "title": "Habits",
+    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research).",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "spring-boot.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
+  },
+  {
+    "href": "https://devs.org.nz",
+    "imgSrc": "work_imgs/devs/devs.png",
+    "title": "Devs",
+    "description": "An Website for the University of Auckland's biggest Software Development Club.",
+    "type": "website",
+    "icons": [
+      "gatsby.svg",
+      "netlify.svg"
+    ]
+  },
+  {
+    "href": "https://www.tekaha.co.nz/",
+    "imgSrc": "work_imgs/tekaha/tekaha.png",
+    "title": "Tekaha",
+    "description": "A platform for the Tekaha community to connect and socialize.",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "spring-boot.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
   },
   {
     "href": "https://play.google.com/store/apps/details?id=com.kekeno.ida",
@@ -23,14 +88,12 @@
     "imgSrc": "work_imgs/ida.png",
     "title": "IDA App",
     "description": "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors.",
-    "type": "app"
-  },
-  {
-    "href": "https://survey-dot-ida-project-354300.ts.r.appspot.com/",
-    "imgSrc": "work_imgs/ida/ida-survey-page.png",
-    "title": "IDA Survey",
-    "description": "A survey platform and admin dashboard for the IDA project.",
-    "type": "website"
+    "type": "app",
+    "icons": [
+      "angular.svg",
+      "ionic.svg",
+      "spring-boot.svg"
+    ]
   },
   {
     "imgSrcs": [
@@ -42,7 +105,12 @@
     "imgSrc": "",
     "title": "Headstrong",
     "description": "Chatbot application tracks the user's mental health which can be monitored on the Habits platform.",
-    "type": "app"
+    "type": "app",
+    "icons": [
+      "angular.svg",
+      "ionic.svg",
+      "spring-boot.svg"
+    ]
   },
   {
     "imgSrcs": [
@@ -54,27 +122,11 @@
     "imgSrc": "",
     "title": "MMCA",
     "description": "A mobile app for mood tracking which can be monitored on the Habits platform.",
-    "type": "app"
-  },
-  {
-    "href": "https://habits.school/",
-    "imgSrc": "work_imgs/habits/habits.png",
-    "title": "Habits",
-    "description": "A web application that tracks the participant's mental health and engagement (Government-funded research).",
-    "type": "website"
-  },
-  {
-    "href": "https://devs.org.nz",
-    "imgSrc": "work_imgs/devs/devs.png",
-    "title": "Devs",
-    "description": "An Website for the University of Auckland's biggest Software Development Club.",
-    "type": "website"
-  },
-  {
-    "href": "https://www.tekaha.co.nz/",
-    "imgSrc": "work_imgs/tekaha/tekaha.png",
-    "title": "Tekaha",
-    "description": "A platform for the Tekaha community to connect and socialize.",
-    "type": "website"
+    "type": "app",
+    "icons": [
+      "angular.svg",
+      "ionic.svg",
+      "spring-boot.svg"
+    ]
   }
 ]
