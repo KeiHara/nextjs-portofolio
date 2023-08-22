@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Home: NextPage = () => {
   return (
     <motion.div
-      className="mx-3 max-w-sm  lg:max-w-2xl"
+      className="w-11/12 max-w-sm  lg:max-w-2xl"
       variants={{
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 }

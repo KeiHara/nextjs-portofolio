@@ -50,7 +50,7 @@ const Works = () => {
 
   return (
     <motion.div
-      className="mx-3 max-w-sm overflow-x-hidden lg:max-w-2xl"
+      className="w-11/12 max-w-sm overflow-x-hidden lg:max-w-2xl"
       variants={{
         hidden: { opacity: 0, x: 0, y: 200 },
         enter: { opacity: 1, x: 0, y: 0 }
