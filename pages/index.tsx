@@ -25,8 +25,8 @@ const Home: NextPage = () => {
       {/* Intro */}
       <div className="flex justify-between pt-4">
         <div>
-          <h1 className="text-4xl font-bold  dark:text-white text-neutral-700">Keisuke Hara</h1>
-          <p className="dark:text-white text-neutral-700">
+          <h1 className="text-4xl font-bold  dark:text-neutral-200 text-neutral-700">Keisuke Hara</h1>
+          <p className="dark:text-neutral-200 text-neutral-700">
             Software Engineer (Frontend Engineer / Musician)
           </p>
         </div>
@@ -58,10 +58,10 @@ const Home: NextPage = () => {
       {/* About */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
           About
         </h3>
-        <p className="text-justify tracking-wide dark:text-white text-neutral-700">
+        <p className="text-justify tracking-wide dark:text-neutral-200 text-neutral-700">
           Keisuke is a final year student studying a Bachelor of Science at the
           University of Auckland, majoring in Computer Science. He is passionate
           about taking on opportunities to improve his web development skills
@@ -69,7 +69,7 @@ const Home: NextPage = () => {
           developer at{" "}
           <a
             draggable={false}
-            className="hover:text-sky500 inline-block origin-bottom-right indent-0 tracking-wide text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+            className="inline-block origin-bottom-right indent-0 tracking-wide text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
             href="https://kekeno.tech/"
             target="_blank"
             rel="noreferrer"
@@ -82,24 +82,24 @@ const Home: NextPage = () => {
       {/* Bio */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
           Bio
         </h3>
         <div className="grid grid-cols-[1fr_3fr] gap-4">
-          <div className="w-fit font-bold dark:text-white text-neutral-700">2003</div>
-          <p className="dark:text-white text-neutral-700">Born in Tokyo (東京), Japan.</p>
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2003</div>
+          <p className="dark:text-neutral-200 text-neutral-700">Born in Tokyo (東京), Japan.</p>
 
-          <div className="w-fit font-bold dark:text-white text-neutral-700">2021</div>
-          <p className="dark:text-white text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2021</div>
+          <p className="dark:text-neutral-200 text-neutral-700">
             Started studying Computer Science at University of Auckland
           </p>
 
-          <div className="w-fit font-bold dark:text-white text-neutral-700">2021 to present</div>
-          <p className="dark:text-white text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2021 to present</div>
+          <p className="dark:text-neutral-200 text-neutral-700">
             Working as a frontend engineer at{" "}
             <a
               draggable={false}
-              className="hover:text-sky500 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+              className="inline-block origin-bottom-right indent-0 text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://kekeno.tech/"
               target="_blank"
               rel="noreferrer"
@@ -108,13 +108,13 @@ const Home: NextPage = () => {
             </a>
           </p>
 
-          <div className="w-fit font-bold dark:text-white text-neutral-700">2022 Summer</div>
-          <p className="dark:text-white text-neutral-700">
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-700">2022 Summer</div>
+          <p className="dark:text-neutral-200 text-neutral-700">
             Working as a Frontend engineer at University of Auckland helping a
             research project called&nbsp;
             <a
               draggable={false}
-              className="inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
+              className="inline-block origin-bottom-right indent-0 text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
               href="https://habits.school/"
               target="_blank"
               rel="noreferrer"
@@ -127,15 +127,15 @@ const Home: NextPage = () => {
       {/* Hobbies */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
           I ❤️
         </h3>
-        <p className="dark:text-white text-neutral-700">Game, music, piano, UI/UX</p>
+        <p className="dark:text-neutral-200 text-neutral-700">Game, music, piano, UI/UX</p>
       </div>
       {/* Social media */}
       <div className="mt-4 flex flex-col">
         <h3
-          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
+          className="mb-2 w-fit text-xl font-bold after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-neutral-200 text-neutral-700 after:dark:bg-zinc-500">
           On the web
         </h3>
         <div className="flex flex-col">
@@ -176,11 +176,11 @@ const MediaLink = ({ icon, mediaLink, text }: mediaLinkProps) => {
       rel="noreferrer"
     >
       <div
-        className="text-sky-700 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
+        className="text-sky-500 duration-200 ease-linear group-hover:text-sky-600 dark:text-teal-300 dark:group-hover:text-teal-200">
         {createElement(icon)}
       </div>
       <p
-        className="ml-2 inline-block origin-bottom-right indent-0 text-sky-700 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 group-hover:text-sky-600 group-hover:after:scale-100  group-hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 dark:group-hover:text-teal-200 dark:group-hover:after:bg-teal-200">
+        className="ml-2 inline-block origin-bottom-right indent-0 text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 group-hover:text-sky-600 group-hover:after:scale-100  group-hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 dark:group-hover:text-teal-200 dark:group-hover:after:bg-teal-200">
         {text}
       </p>
     </a>
