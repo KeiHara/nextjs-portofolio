@@ -116,7 +116,7 @@ const Works = () => {
         </div>
         <motion.div
           ref={worksContainerRef}
-          className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto py-2"
+          className="scrollbar flex w-full snap-x snap-mandatory overflow-x-auto"
         >
           <motion.div
             ref={webappContainerRef}
@@ -205,7 +205,7 @@ const WorkCard = ({
         >
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
-              <div key={i} className="flex overflow-hidden rounded-md group-hover:border-2 relative">
+              <div className="flex overflow-hidden rounded-md group-hover:border-2 relative">
                 <motion.img
                   onLoad={() => setIsLoaded(true)}
                   key={i}
@@ -237,11 +237,10 @@ const WorkCard = ({
               className="absolute grid grid-cols-6 w-full h-full items-center justify-items-center invisible opacity-0 duration-200 ease-linear group-hover:visible group-hover:opacity-100">
               {icons?.map((icon, i) => (
                 <div
-                  key={i}
                   className={`h-8 aspect-square 
                   ${(icons?.length % 3 === 2 && (i === icons.length - 2 || i === icons.length - 1)) && "col-span-3"} 
-                  ${(icons?.length % 3 === 2 && (i !== icons.length - 2 || i !== icons.length - 1)) && "col-span-2"} 
-                  ${(icons?.length % 3 === 1 && (icons?.length !== 1)) && "col-span-3"} 
+                  ${(icons?.length % 3 === 2 && (i !== icons.length - 2 && i !== icons.length - 1)) && "col-span-2"} 
+                  ${(icons.length === 4) && "col-span-3"} 
                   ${(icons?.length === 1) && "col-span-6"} 
                   ${icons?.length % 3 === 0 && "col-span-2"}`
                   }>
