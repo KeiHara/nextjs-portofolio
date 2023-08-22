@@ -64,10 +64,10 @@ const Works = () => {
       <div className="flex w-full flex-col items-center">
         <div className="mb-2 mt-3 flex w-full">
           <h3
-            className="w-fit text-xl font-bold text-black after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white after:dark:bg-zinc-500">
+            className="w-fit text-xl font-bold text-neutral-700 after:float-left after:h-1 after:w-full after:rounded-sm after:bg-gray-700 dark:text-white text-neutral-700 after:dark:bg-zinc-500">
             Work
           </h3>
-          <h3 className="mx-2 w-fit text-xl font-bold text-black dark:text-white">
+          <h3 className="mx-2 w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700">
             -
           </h3>
           <motion.div className="group relative" whileHover="hover">
@@ -101,13 +101,13 @@ const Works = () => {
             >
               <motion.h3
                 style={{ y }}
-                className="w-fit text-xl font-bold text-black dark:text-white"
+                className="w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700"
               >
                 Website
               </motion.h3>
               <motion.h3
                 style={{ y }}
-                className="w-fit text-xl font-bold text-black dark:text-white"
+                className="w-fit text-xl font-bold text-neutral-700 dark:text-white text-neutral-700"
               >
                 Mobile App
               </motion.h3>
@@ -195,7 +195,7 @@ const WorkCard = ({
       <div className="flex justify-center">
         <motion.div
           className={`flex h-36 rounded-md overflow-hidden relative ${
-            imgSrcs ? "justify-between w-full" : "justify-center w-fit group-hover:border-2"
+            imgSrcs ? "justify-between w-full" : "justify-center w-fit group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400"
           }`}
           variants={{
             hover: {
@@ -205,7 +205,9 @@ const WorkCard = ({
         >
           {imgSrcs ? (
             imgSrcs.map((src, i) => (
-              <div className="flex overflow-hidden rounded-md group-hover:border-2 relative" key={i}>
+              <div
+                className="flex overflow-hidden rounded-md group-hover:border-2 dark:group-hover:border-white group-hover:border-neutral-400 relative"
+                key={i}>
                 <motion.img
                   onLoad={() => setIsLoaded(true)}
                   key={i}
@@ -255,13 +257,13 @@ const WorkCard = ({
       <div className="mt-5 flex flex-col content-center items-center">
         <motion.h1
           variants={{ hover: { scale: 1.05 } }}
-          className="text-center text-4xl font-bold dark:text-white"
+          className="text-center text-4xl font-bold dark:text-white text-neutral-700"
         >
           {title}
         </motion.h1>
         <motion.p
           variants={{ hover: { scale: 1.05 } }}
-          className="text-center dark:text-white"
+          className="text-center dark:text-white text-neutral-700"
         >
           {description}
         </motion.p>

@@ -1,11 +1,5 @@
 import React, { createElement, useEffect, useState } from "react";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaGithub,
-  FaMoon,
-  FaSun
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 import { BiUserCircle } from "react-icons/bi";
 import { MdWorkOutline } from "react-icons/md";
@@ -74,7 +68,7 @@ const SideBar = () => {
 
   return (
     <div
-      className={`fixed z-50 m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white  sm:top-2/4 sm:h-[500px] sm:max-h-[80%] sm:-translate-y-2/4  sm:rounded-2xl ${
+      className={`fixed z-50 m-0 flex h-full w-20 flex-col bg-neutral-200 py-2 shadow-lg transition-all duration-300 ease-in-out  dark:bg-zinc-800 dark:text-white text-neutral-700  sm:top-2/4 sm:h-[500px] sm:max-h-[80%] sm:-translate-y-2/4  sm:rounded-2xl ${
         !isOnLeft
           ? "sm:left-[calc((100%-384px)/2+384px+40px)] lg:left-[calc((100%-672px)/2+672px+40px)]"
           : "sm:left-[calc((100%-384px)/2-130px)] lg:left-[calc((100%-672px)/2-130px)]"
