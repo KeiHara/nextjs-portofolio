@@ -42,6 +42,19 @@
     ]
   },
   {
+    "href": "https://www.tirohia.co.nz/",
+    "imgSrc": "work_imgs/tirohia/tirohia.png",
+    "title": "Tirohia",
+    "description": "Habits rebranded!",
+    "type": "website",
+    "icons": [
+      "angular.svg",
+      "spring-boot.svg",
+      "docker.svg",
+      "gcp.svg"
+    ]
+  },
+  {
     "href": "https://habits.school/",
     "imgSrc": "work_imgs/habits/habits.png",
     "title": "Habits",
