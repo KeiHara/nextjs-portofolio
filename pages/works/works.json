@@ -1,5 +1,12 @@
 [
   {
+    "href": "https://musescore-scraper-oespf4fqca-ts.a.run.app/",
+    "imgSrc": "work_imgs/musescore-scraper/musescore-scraper.png",
+    "title": "Musescore scraper",
+    "description": "A website where you can download any musescore music sheet for free",
+    "type": "website"
+  },
+  {
     "href": "https://youthchat.co.nz/",
     "imgSrc": "work_imgs/youthchat/youthchat.png",
     "title": "Youthchat",
