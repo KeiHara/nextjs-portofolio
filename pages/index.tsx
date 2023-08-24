@@ -51,7 +51,7 @@ const Home: NextPage = () => {
               <Image
                 width="100%"
                 height="100%"
-                className="rounded-full duration-200 ease-linear group-hover:blur-sm group-hover:brightness-50"
+                className="rounded-full duration-200 ease-linear group-hover:blur-sm"
                 src={profile.src}
                 alt="prof-pic"
                 draggable={false}
