@@ -211,7 +211,7 @@ const WorkCard = ({
                 <motion.img
                   onLoad={() => setIsLoaded(true)}
                   key={i}
-                  className={`rounded-md group-hover:blur-sm ${!isLoaded ?? "blur-sm"}}`}
+                  className={`rounded-md group-hover:blur-sm group-hover:brightness-50 ${!isLoaded ?? "blur-sm"}}`}
                   src={src}
                   alt="img"
                   draggable={false}
@@ -228,7 +228,7 @@ const WorkCard = ({
             ))
           ) : (
             <motion.img
-              className="rounded-md duration-200 ease-linear group-hover:blur-sm"
+              className="rounded-md duration-200 ease-linear group-hover:blur-sm group-hover:brightness-50"
               src={imgSrc}
               alt="img"
               draggable={false}
