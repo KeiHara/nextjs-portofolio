@@ -1,5 +1,20 @@
 [
   {
+    "href": "https://codecritters.live/",
+    "imgSrc": "work_imgs/code-critters/code-critters.png",
+    "title": "Code Critters",
+    "description": "AI platform to identify unknown-winged insects for local government bio-hazard protection.",
+    "type": "website",
+    "icons": [
+      "react.svg",
+      "tailwind.svg",
+      "daisyui.svg",
+      "fastApi.svg",
+      "firebase.svg",
+      "tensorflow.svg"
+    ]
+  },
+  {
     "href": "https://musescore-scraper-oespf4fqca-ts.a.run.app/",
     "imgSrc": "work_imgs/musescore-scraper/musescore-scraper.png",
     "title": "Musescore scraper",
