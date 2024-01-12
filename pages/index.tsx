@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           <h1 className="text-4xl font-bold  dark:text-neutral-200 text-neutral-800">Keisuke Hara</h1>
           <p className="dark:text-neutral-200 text-neutral-800">
             Software Engineer (Frontend Engineer) <br />
-            📍 Tokyo / Japan 🔜 🛫 Sdyney / Australia <br />
+            📍 Sydney 🇦🇺 🦘 <br />
             <a
               draggable={false}
               className="inline-block origin-bottom-right indent-0 tracking-wide text-sky-500 duration-200 ease-linear after:float-left after:h-0.5 after:w-full after:origin-center after:scale-0 after:rounded-sm after:bg-sky-700 after:duration-200 hover:text-sky-600 hover:after:scale-100  hover:after:bg-sky-600 dark:text-teal-300 after:dark:bg-teal-300 hover:dark:text-teal-200 hover:after:dark:bg-teal-200"
@@ -135,6 +135,10 @@ const Home: NextPage = () => {
           <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2023 Nov</div>
           <p className="dark:text-neutral-200 text-neutral-800">
             Completed Bachelor of Science (Computer Science) at University of Auckland
+          </p>
+          <div className="w-fit font-bold dark:text-neutral-200 text-neutral-800">2024 Feb</div>
+          <p className="dark:text-neutral-200 text-neutral-800">
+            Started studying Master of Information Technology at University of New South Wales
           </p>
         </div>
       </div>
