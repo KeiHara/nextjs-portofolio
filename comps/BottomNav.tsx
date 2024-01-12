@@ -153,8 +153,14 @@ const BottomNav = () => {
         </motion.div>
         <motion.div
           variants={{
+            toggled: {
+              width: "2rem"
+            },
+            unToggled: {
+              width: "0rem"
+            },
             hover: {
-              height: "1.25rem"
+              width: "2rem"
             },
             darkHighlight: {
               backgroundColor: "rgb(255 255 255)"
@@ -167,7 +173,7 @@ const BottomNav = () => {
             duration: 0.2,
             ease: "easeInOut"
           }}
-          className={`absolute top-1/2 w-1 origin-left -translate-y-1/2 rounded-r-full`}></motion.div>
+          className={`absolute bottom-0 h-1 origin-bottom -translate-x-1/2 left-2/4 rounded-t-full`}></motion.div>
       </motion.div>
     </div>
   );
@@ -236,7 +242,7 @@ const SideBarIcon = ({
             width: "0rem"
           },
           hover: {
-            width: "1.25rem"
+            width: "2rem"
           }
         }}
         transition={{
