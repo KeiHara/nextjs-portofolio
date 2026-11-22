@@ -13,15 +13,6 @@ export interface Work {
 }
 export const works: Work[] = [
   {
-    id: "code-critters",
-    kind: "website",
-    title: "Code Critters",
-    description:
-      "AI platform to identify unknown-winged insects for local government bio-hazard protection.",
-    images: ["works/code-critters/code-critters"],
-    tech: ["react", "tailwind", "daisyui", "fastapi", "firebase", "tensorflow"],
-  },
-  {
     id: "musescore-scraper",
     kind: "website",
     title: "Musescore scraper",
@@ -64,15 +55,6 @@ export const works: Work[] = [
       "A web application that tracks the participant's mental health and engagement (Government-funded research).",
     images: ["works/habits/habits"],
     tech: ["angular", "spring-boot", "docker", "gcp"],
-  },
-  {
-    id: "devs",
-    kind: "website",
-    title: "Devs",
-    description:
-      "A website for the University of Auckland's biggest Software Development Club.",
-    images: ["works/devs/devs"],
-    tech: ["gatsby", "netlify"],
   },
   {
     id: "tekaha",
