@@ -20,8 +20,7 @@ export function NavItem({
         <>
           {label}{" "}
           <KbdGroup>
-            <Kbd>G</Kbd>
-            <Kbd>{shortcut}</Kbd>
+            {shortcut.map((key) => <Kbd key={key}>{key}</Kbd>)}
           </KbdGroup>
         </>
       }
