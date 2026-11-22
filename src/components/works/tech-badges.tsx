@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 
 export function TechBadges({ tech: ids }: { tech: TechId[] }) {
   return (
-    <ul className="flex flex-wrap gap-1.5">
+    <ul className="flex flex-wrap gap-inline">
       {ids.map((id) => {
         const item = tech[id]
         return (
@@ -16,7 +16,7 @@ export function TechBadges({ tech: ids }: { tech: TechId[] }) {
                 alt=""
                 width={12}
                 height={12}
-                className={cn("size-3", "mono" in item && "dark:invert")}
+                className={cn("size-icon-small", "mono" in item && "dark:invert")}
               />
               {item.label}
             </Badge>

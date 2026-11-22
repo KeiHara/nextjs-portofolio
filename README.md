@@ -11,4 +11,5 @@ Use Node 26.x and npm. Run `npm ci`, then `npm run dev` and open http://localhos
 - Update CV copy in `src/data/profile.ts` and project details in `src/data/works.ts`.
 - Keep image originals in `assets/images/`. Run `npm run images` and commit the generated WebP files, social preview image and typed image manifest.
 - Components are presentational; keep stateful behaviour in `src/hooks/`. Use the shadcn CLI for `src/components/ui/`.
+- Define portfolio spacing in the Tailwind theme in `src/styles.css`. Use `tight` for closely related text, `inline` for controls and badges, `stack` within a section, `group` between entries, and `section` between sections (for example `gap-inline` or `mt-section`). Shell sizing and breakpoint adjustments live alongside these tokens, not in individual components.
 - Deploy with the TanStack Start Vercel preset. Nitro selects the Vercel output format at build time. For a custom domain, update `src/lib/site.ts` and `public/robots.txt`.

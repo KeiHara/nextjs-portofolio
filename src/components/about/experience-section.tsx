@@ -5,14 +5,14 @@ import { TextLink } from "@/components/shared/text-link"
 export function ExperienceSection({ experience }: Pick<Profile, "experience">) {
   return (
     <Section title="Experience">
-      <div className="space-y-5">
+      <div className="space-y-group">
         {experience.map(({ company, url, role, period, highlights }) => (
           <article key={company}>
             <h3 className="font-medium">
               {role} · <TextLink href={url}>{company}</TextLink>
             </h3>
             <p className="text-sm text-muted-foreground">{period}</p>
-            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
+            <ul className="mt-inline list-disc space-y-tight pl-stack text-sm">
               {highlights.map((h) => (
                 <li key={h}>{h}</li>
               ))}

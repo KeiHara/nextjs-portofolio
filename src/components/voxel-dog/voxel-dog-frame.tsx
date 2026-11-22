@@ -11,7 +11,7 @@ export function VoxelDogFrame({
     <div
       ref={ref}
       aria-hidden="true"
-      className="relative mx-auto mt-[-30px] mb-[-100px] size-[300px] sm:mt-[-200px] sm:mb-[-220px] sm:size-[640px]"
+      className="relative size-scene shrink-0"
     >
       {children}
     </div>

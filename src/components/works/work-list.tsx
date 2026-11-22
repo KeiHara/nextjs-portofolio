@@ -16,7 +16,7 @@ export function WorkList({ kind }: { kind: WorkKind }) {
       <h2 className="sr-only">
         {kind === "website" ? "Websites" : "Mobile apps"}
       </h2>
-      <ul className="mt-4 grid gap-4 lg:grid-cols-2">
+      <ul className="mt-stack grid gap-stack lg:grid-cols-2">
         {works.map((work) => (
           <li key={work.id}>
             <WorkCard work={work} />

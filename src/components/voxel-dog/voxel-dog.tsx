@@ -7,7 +7,7 @@ export function VoxelDog() {
   return (
     <VoxelDogFrame ref={containerRef}>
       {status === "loading" && (
-        <Spinner className="absolute inset-0 m-auto size-6 text-muted-foreground" />
+        <Spinner className="absolute inset-0 m-auto size-spinner text-muted-foreground" />
       )}
     </VoxelDogFrame>
   )

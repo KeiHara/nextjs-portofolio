@@ -26,18 +26,18 @@ export function AppShell({
   useAppHotkeys()
   return (
     <TooltipProvider>
-      <div className="[--col:24rem] lg:[--col:42rem]">
+      <div>
         <TopBar title={title} />
         <NavRail />
-        <main className="pt-24 pb-28 sm:pt-32 sm:pb-12">
-          <div className="flex justify-center overflow-x-clip">
+        <main className="pt-page-start pb-page-end">
+          <div className="flex h-hero items-center justify-center overflow-clip">
             <ClientOnly fallback={<VoxelDogFrame />}>
               <Suspense fallback={<VoxelDogFrame />}>
                 <LazyVoxelDog />
               </Suspense>
             </ClientOnly>
           </div>
-          <div className="relative mx-auto w-11/12 max-w-sm lg:max-w-2xl">
+          <div className="relative mx-auto mt-stack w-column">
             {children}
           </div>
         </main>

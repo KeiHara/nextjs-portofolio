@@ -1,13 +1,53 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/geist";
+@import "@fontsource-variable/jetbrains-mono";
 
 @custom-variant dark (&:is(.dark *));
 
+/* Portfolio rhythm. Tailwind derives gap-*, p-* and m-* from these roles. */
+@theme {
+  --spacing-tight: --spacing(1);
+  --spacing-inline: --spacing(2);
+  --spacing-stack: --spacing(4);
+  --spacing-group: --spacing(6);
+  --spacing-section: --spacing(8);
+
+  --spacing-gutter: var(--spacing-stack);
+  --spacing-column: min(42rem, calc(100% - 2 * var(--spacing-gutter)));
+  --spacing-toolbar: --spacing(14);
+  --spacing-top-edge: max(var(--spacing-gutter), env(safe-area-inset-top));
+  --spacing-bottom-edge: max(var(--spacing-gutter), env(safe-area-inset-bottom));
+  --spacing-page-start: calc(var(--spacing-top-edge) + var(--spacing-toolbar) + var(--spacing-inline));
+  --spacing-page-end: calc(var(--spacing-bottom-edge) + var(--spacing-toolbar) + var(--spacing-stack));
+  --spacing-rail: --spacing(14);
+  --spacing-rail-left: calc(50% - var(--spacing-column) / 2 - var(--spacing-group) - var(--spacing-rail));
+  --spacing-rail-right: calc(50% + var(--spacing-column) / 2 + var(--spacing-group));
+
+  /* The camera needs a square canvas; only the visible hero slot takes up space. */
+  --spacing-scene: 18.75rem;
+  --spacing-hero: 11rem;
+  --spacing-avatar: --spacing(20);
+  --spacing-icon-small: --spacing(3);
+  --spacing-icon: --spacing(4);
+  --spacing-spinner: --spacing(6);
+}
+
+@media (width >= theme(--breakpoint-sm)) {
+  :root {
+    --spacing-section: --spacing(10);
+    --spacing-column: min(42rem, calc(100% - 2 * (var(--spacing-gutter) + var(--spacing-rail) + var(--spacing-group))));
+    --spacing-page-end: var(--spacing-section);
+    --spacing-scene: 40rem;
+    --spacing-hero: 16rem;
+    --spacing-avatar: --spacing(24);
+  }
+}
+
 @theme inline {
-    --font-heading: var(--font-sans);
-    --font-sans: 'Geist Variable', sans-serif;
+    --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+    --font-heading: var(--font-mono);
+    --font-sans: system-ui, sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
     --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -49,78 +89,67 @@
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+  --background: #faf4e8;
+  --foreground: #34271f;
+  --card: #fffbf3;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #90452d;
+  --primary-foreground: #fff8ef;
+  --secondary: #f0dfca;
+  --secondary-foreground: #573c2a;
+  --muted: #f3e9da;
+  --muted-foreground: #705a49;
+  --accent: #efcfb3;
+  --accent-foreground: #542b1d;
+  --destructive: #a33630;
+  --border: #d8c6ad;
+  --input: var(--border);
+  --ring: var(--primary);
+  --chart-1: var(--primary);
+  --chart-2: #496961;
+  --chart-3: #977032;
+  --chart-4: #815675;
+  --chart-5: #576082;
+  --radius: 0.875rem;
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+  --background: #201a17;
+  --foreground: #f5e7d5;
+  --card: #2b231e;
+  --primary: #efa780;
+  --primary-foreground: #312019;
+  --secondary: #423329;
+  --secondary-foreground: #efdbc6;
+  --muted: #342a23;
+  --muted-foreground: #c5ac97;
+  --accent: #503929;
+  --accent-foreground: #ffe4c8;
+  --destructive: #ff9689;
+  --border: #564333;
+  --chart-2: #91beb2;
+  --chart-3: #d4af6d;
+  --chart-4: #c79eb9;
+  --chart-5: #a1add5;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
     }
+  :where(h1, h2, h3, nav, kbd, [data-slot="badge"]) {
+    @apply font-mono;
+  }
   body {
     @apply bg-background text-foreground;
     }

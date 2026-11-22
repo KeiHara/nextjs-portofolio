@@ -13,7 +13,7 @@ export function WorkMedia({ work: { images, title } }: { work: Work }) {
       />
     )
   return (
-    <div className="grid grid-cols-3 gap-2 px-(--card-spacing)">
+    <div className="grid grid-cols-3 gap-inline px-(--card-spacing)">
       {images.map((image, i) => (
         <ResponsiveImage
           key={image}

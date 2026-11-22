@@ -11,12 +11,14 @@ export function ProfileHeader({
   avatar,
 }: Pick<Profile, "name" | "role" | "location" | "email" | "avatar">) {
   return (
-    <div className="flex items-center justify-between gap-3">
+    <div className="flex items-center justify-between gap-stack">
       <div className="min-w-0">
-        <p className="text-2xl font-semibold">{name}</p>
+        <p className="font-heading text-2xl font-semibold tracking-tight">
+          {name}
+        </p>
         <p className="text-muted-foreground">{role}</p>
-        <p className="my-1 flex items-center gap-1 text-sm text-muted-foreground">
-          <MapPinIcon className="size-4" />
+        <p className="my-tight flex items-center gap-tight text-sm text-muted-foreground">
+          <MapPinIcon className="size-icon" />
           {location}
         </p>
         <TextLink href={"mailto:" + email}>{email}</TextLink>
@@ -26,7 +28,7 @@ export function ProfileHeader({
         alt="Portrait of Keisuke Hara"
         sizes="96px"
         priority
-        className="size-24 shrink-0 rounded-full border object-cover"
+        className="size-avatar shrink-0 rounded-full border object-cover"
       />
     </div>
   )
