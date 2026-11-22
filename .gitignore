@@ -8,9 +8,12 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# TanStack Start / Nitro
+.output
+.nitro
+.tanstack
+dist
+.idea
 
 # production
 /build

@@ -1,0 +1,145 @@
+{
+  "profile": {
+    "width": 1500,
+    "height": 1500,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/code-critters/code-critters": {
+    "width": 2940,
+    "height": 1838,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/devs/devs": {
+    "width": 2940,
+    "height": 1699,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/habits/habits": {
+    "width": 2940,
+    "height": 1839,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/headstrong/headstrong1": {
+    "width": 810,
+    "height": 1440,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/headstrong/headstrong2": {
+    "width": 810,
+    "height": 1440,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/headstrong/headstrong3": {
+    "width": 166,
+    "height": 296,
+    "widths": [
+      166
+    ]
+  },
+  "works/ida/ida-app1": {
+    "width": 1243,
+    "height": 2208,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/ida/ida-app2": {
+    "width": 1243,
+    "height": 2208,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/ida/ida-app3": {
+    "width": 1243,
+    "height": 2208,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/ida/ida-survey-page": {
+    "width": 2939,
+    "height": 1838,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/mmca/mmca1": {
+    "width": 2439,
+    "height": 5276,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/mmca/mmca2": {
+    "width": 2439,
+    "height": 5276,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/mmca/mmca3": {
+    "width": 2439,
+    "height": 5276,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/musescore-scraper/musescore-scraper": {
+    "width": 2938,
+    "height": 1740,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/tekaha/tekaha": {
+    "width": 2913,
+    "height": 1800,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/tirohia/tirohia": {
+    "width": 2940,
+    "height": 1820,
+    "widths": [
+      400,
+      800
+    ]
+  },
+  "works/youthchat/youthchat": {
+    "width": 2940,
+    "height": 1840,
+    "widths": [
+      400,
+      800
+    ]
+  }
+}

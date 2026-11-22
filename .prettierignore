@@ -1,0 +1,7 @@
+package-lock.json
+src/routeTree.gen.ts
+.output
+.vercel
+.nitro
+.tanstack
+dist
