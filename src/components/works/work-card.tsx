@@ -15,8 +15,20 @@ import { WorkMedia } from "./work-media"
 export function WorkCard({ work }: { work: Work }) {
   const { title, description, href, tech } = work
   return (
-    <Card className="h-full">
-      <WorkMedia work={work} />
+    <Card className="h-full has-[>a:first-child>img]:pt-0">
+      {href && work.images.length > 0 ? (
+        <a
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open ${title} (opens in a new tab)`}
+          className="block focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"
+        >
+          <WorkMedia work={work} />
+        </a>
+      ) : (
+        <WorkMedia work={work} />
+      )}
       <CardHeader>
         <CardTitle>
           <h3>{title}</h3>
