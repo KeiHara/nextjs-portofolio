@@ -21,7 +21,7 @@ for (const file of sources) {
     await sharp(input).resize({ width: w }).webp({ quality: 80 }).toFile(output)
   }
 }
-await sharp(join(root, "profile.jpg"))
+await sharp("assets/social-preview.jpg")
   .resize(800, 800)
   .jpeg({ quality: 85 })
   .toFile("public/og.jpg")
