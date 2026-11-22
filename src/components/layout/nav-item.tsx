@@ -28,6 +28,7 @@ export function NavItem({
       trigger={
         <Button
           nativeButton={false}
+          role="link"
           variant="ghost"
           size="icon-lg"
           className="data-[status=active]:bg-primary data-[status=active]:text-primary-foreground"

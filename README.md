@@ -1,34 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Keisuke Hara’s portfolio
 
-## Getting Started
+A TanStack Start portfolio with prerendered About, Websites and Mobile apps pages. The interactive voxel dog loads separately; the portfolio content works without JavaScript.
 
-First, run the development server:
+## Local development
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Use Node 26.x and npm. Run `npm ci`, then `npm run dev` and open http://localhost:3000. Run `npm run lint`, `npm run typecheck` and `npm run build` before pushing. To serve the production build locally, run `npm run preview -- --port 3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Editing the site
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Update CV copy in `src/data/profile.ts` and project details in `src/data/works.ts`.
+- Keep image originals in `assets/images/`. Run `npm run images` and commit the generated WebP files, social preview image and typed image manifest.
+- Components are presentational; keep stateful behaviour in `src/hooks/`. Use the shadcn CLI for `src/components/ui/`.
+- Deploy with the TanStack Start Vercel preset. Nitro selects the Vercel output format at build time. For a custom domain, update `src/lib/site.ts` and `public/robots.txt`.

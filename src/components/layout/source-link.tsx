@@ -14,6 +14,7 @@ export function SourceLink({ side }: { side: TooltipSide }) {
           variant="ghost"
           size="icon-lg"
           nativeButton={false}
+          role="link"
           render={
             <a
               href={REPO_URL}

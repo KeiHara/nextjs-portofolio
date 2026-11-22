@@ -12,7 +12,12 @@ export default defineConfig({
     devtools(),
     tailwindcss(),
     tanstackStart({
-      prerender: { enabled: true, crawlLinks: true, failOnError: true, filter: ({path}) => path === "/" || !path.endsWith("/") },
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+        failOnError: true,
+        filter: ({ path }) => path === "/" || !path.endsWith("/"),
+      },
       sitemap: { host: SITE_URL },
     }),
     nitro(),

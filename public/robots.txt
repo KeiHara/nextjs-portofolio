@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nextjs-portofolio-six.vercel.app/sitemap.xml

@@ -14,7 +14,7 @@ export function NotFound() {
         <EmptyTitle>Page not found</EmptyTitle>
         <EmptyDescription>That page does not exist.</EmptyDescription>
       </EmptyHeader>
-      <Button nativeButton={false} render={<Link to="/" />}>
+      <Button nativeButton={false} role="link" render={<Link to="/" />}>
         Back to About
       </Button>
     </Empty>
