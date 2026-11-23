@@ -2,6 +2,8 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6"
 import type { IconType } from "react-icons"
 import type { ImageKey } from "@/lib/images"
 
+export const LINKEDIN_URL = "https://www.linkedin.com/in/keisuke-hara/"
+
 export interface Experience {
   company: string
   url: string
@@ -43,8 +45,7 @@ export const profile: Profile = {
   email: "keihara453@gmail.com",
   avatar: "profile",
   about: [
-    "Keisuke is a full-stack engineer at Heidi Health, where he joined as the fourth frontend engineer on the core Scribe team. Scribe is Heidi's flagship product, used by tens of thousands of clinicians across 200+ medical specialties for more than 2.5 million patient consultations a week in 190+ countries.",
-    "Before Heidi he spent three years as a frontend developer at Kekeno Tech. He was born in Tokyo (東京), Japan, and is based in Sydney.",
+    "I joined Heidi Health before Series A as its fourth frontend engineer. I’ve helped build Scribe through Series C.",
   ],
   experience: [
     {
@@ -53,11 +54,9 @@ export const profile: Profile = {
       role: "Full-Stack Engineer",
       period: "Jun 2024 — Present",
       highlights: [
-        "Fourth frontend engineer on the core Scribe team, from pre-Series A through Series C as engineering grew from 20 to 144.",
-        "Soloed the full frontend rebrand for the September 2025 Series B launch: tokens, components, typography and layout across the codebase.",
-        "Cut load times by 50% across core clinical flows with reusable Next.js components and optimised render paths.",
-        "Introduced CodeRabbit and rolled out Cursor across engineering in 2024, and re-architected ESLint and CI rules for the frontend repo.",
-        "Built a one-script onboarding tool that cut new-engineer setup from hours to a single command.",
+        "Built Scribe as the engineering team grew from 20 to 144.",
+        "Led the frontend rebrand for the Series B launch.",
+        "Halved load times in core clinical workflows.",
       ],
     },
     {
@@ -66,9 +65,7 @@ export const profile: Profile = {
       role: "Frontend Developer",
       period: "Aug 2021 — Jun 2024",
       highlights: [
-        "Delivered features across research and non-research projects with engineering and design.",
-        "Designed a Bitbucket CI pipeline with ESLint and Stylelint; parallel steps made tests up to 50% faster.",
-        "Worked with the Tech Lead on architecture decisions and code review standards.",
+        "Ran tests in parallel in Bitbucket, cutting test times by up to 50%.",
       ],
     },
   ],
@@ -121,7 +118,7 @@ export const profile: Profile = {
     {
       label: "LinkedIn",
       handle: "@keisuke-hara",
-      url: "https://www.linkedin.com/in/keisuke-hara/",
+      url: LINKEDIN_URL,
       icon: FaLinkedin,
     },
     {

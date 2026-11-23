@@ -16,8 +16,7 @@ export const works: Work[] = [
     id: "musescore-scraper",
     kind: "website",
     title: "Musescore scraper",
-    description:
-      "A website where you can download any musescore music sheet for free",
+    description: "Download sheet music from MuseScore.",
     images: ["works/musescore-scraper/musescore-scraper"],
     tech: ["svelte", "tailwind", "daisyui", "puppeteer", "docker", "gcp"],
   },
@@ -25,8 +24,7 @@ export const works: Work[] = [
     id: "youthchat",
     kind: "website",
     title: "Youthchat",
-    description:
-      "An Electronic Case Finding and Help Assessment Tool for Youth",
+    description: "Helps young people identify where they need support.",
     images: ["works/youthchat/youthchat"],
     tech: ["dotnet", "tailwind", "docker", "gcp"],
     href: "https://youthchat.co.nz/",
@@ -35,7 +33,7 @@ export const works: Work[] = [
     id: "ida-survey",
     kind: "website",
     title: "IDA Survey",
-    description: "A survey platform and admin dashboard for the IDA project.",
+    description: "Surveys and an admin dashboard for diagnostic research.",
     images: ["works/ida/ida-survey-page"],
     tech: ["angular", "tailwind", "daisyui", "docker", "gcp"],
   },
@@ -43,7 +41,7 @@ export const works: Work[] = [
     id: "tirohia",
     kind: "website",
     title: "Tirohia",
-    description: "Habits rebranded!",
+    description: "A new look for the Habits mental health platform.",
     images: ["works/tirohia/tirohia"],
     tech: ["angular", "spring-boot", "docker", "gcp"],
   },
@@ -51,8 +49,7 @@ export const works: Work[] = [
     id: "habits",
     kind: "website",
     title: "Habits",
-    description:
-      "A web application that tracks the participant's mental health and engagement (Government-funded research).",
+    description: "Tracks mental health and engagement in research studies.",
     images: ["works/habits/habits"],
     tech: ["angular", "spring-boot", "docker", "gcp"],
   },
@@ -60,8 +57,7 @@ export const works: Work[] = [
     id: "tekaha",
     kind: "website",
     title: "Tekaha",
-    description:
-      "A platform for the Tekaha community to connect and socialize.",
+    description: "A space for the Tekaha community to connect.",
     images: ["works/tekaha/tekaha"],
     tech: ["angular", "spring-boot", "docker", "gcp"],
     href: "https://www.tekaha.co.nz/",
@@ -70,8 +66,7 @@ export const works: Work[] = [
     id: "ida-app",
     kind: "app",
     title: "IDA App",
-    description:
-      "A mobile app being developed to help improve diagnostic accuracy amongst medical doctors.",
+    description: "Helps doctors work on diagnostic accuracy.",
     images: ["works/ida/ida-app1", "works/ida/ida-app2", "works/ida/ida-app3"],
     tech: ["angular", "ionic", "spring-boot"],
   },
@@ -79,8 +74,7 @@ export const works: Work[] = [
     id: "headstrong",
     kind: "app",
     title: "Headstrong",
-    description:
-      "Chatbot application tracks the user's mental health which can be monitored on the Habits platform.",
+    description: "A mental health check-in chatbot linked to Habits.",
     images: [
       "works/headstrong/headstrong1",
       "works/headstrong/headstrong2",
@@ -93,8 +87,7 @@ export const works: Work[] = [
     id: "mmca",
     kind: "app",
     title: "MMCA",
-    description:
-      "A mobile app for mood tracking which can be monitored on the Habits platform.",
+    description: "A mood tracker that shares updates with Habits.",
     images: ["works/mmca/mmca1", "works/mmca/mmca2", "works/mmca/mmca3"],
     tech: ["angular", "ionic", "spring-boot"],
   },
