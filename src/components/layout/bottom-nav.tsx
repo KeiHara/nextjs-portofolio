@@ -7,7 +7,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Primary"
-      className="fixed bottom-bottom-edge left-1/2 z-40 flex h-toolbar w-column -translate-x-1/2 items-center justify-evenly rounded-xl border bg-background/70 backdrop-blur sm:hidden"
+      className="fixed bottom-bottom-edge left-1/2 z-40 flex h-toolbar w-fit -translate-x-1/2 items-center gap-inline rounded-xl border bg-background/70 px-inline backdrop-blur sm:hidden"
     >
       {navItems.map((item) => (
         <NavItem key={item.to} item={item} tooltipSide="top" />
