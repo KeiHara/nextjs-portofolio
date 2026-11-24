@@ -39,6 +39,7 @@ export const works: Work[] = [
   },
   {
     id: "tirohia",
+    href: "https://tirohia.co.nz/",
     kind: "website",
     title: "Tirohia",
     description: "A new look for the Habits mental health platform.",
