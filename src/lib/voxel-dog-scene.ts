@@ -31,7 +31,8 @@ export async function createVoxelDogScene(
   const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches
   controls.autoRotate = !reduceMotion
   controls.target.copy(target)
-  controls.enableZoom = false
+  controls.minZoom = 0.65
+  controls.maxZoom = 2
   controls.enablePan = false
   renderer.domElement.style.touchAction = "pan-y"
   let frame = reduceMotion ? 101 : 0

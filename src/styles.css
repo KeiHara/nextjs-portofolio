@@ -31,6 +31,7 @@
   --spacing-icon-small: --spacing(3);
   --spacing-icon: --spacing(4);
   --spacing-spinner: --spacing(6);
+  --spacing-globe: 13rem;
 }
 
 @media (width >= theme(--breakpoint-sm)) {
