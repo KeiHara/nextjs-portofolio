@@ -1,9 +1,14 @@
 import { Link } from "@tanstack/react-router"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { Kbd, KbdGroup } from "@/components/ui/kbd"
 import type { navItems } from "@/data/navigation"
 import { NavTooltip } from "./nav-tooltip"
 import type { TooltipSide } from "./nav-tooltip"
+
+const activeProps = { className: buttonVariants({ size: "icon-lg" }) }
+const inactiveProps = {
+  className: buttonVariants({ variant: "ghost", size: "icon-lg" }),
+}
 
 export function NavItem({
   item,
@@ -25,16 +30,14 @@ export function NavItem({
         </>
       }
       trigger={
-        <Button
-          nativeButton={false}
-          role="link"
-          variant="ghost"
-          size="icon-lg"
-          className="data-[status=active]:bg-primary data-[status=active]:text-primary-foreground"
-          render={<Link {...link} aria-label={label} />}
+        <Link
+          {...link}
+          aria-label={label}
+          activeProps={activeProps}
+          inactiveProps={inactiveProps}
         >
           <Icon />
-        </Button>
+        </Link>
       }
     />
   )
