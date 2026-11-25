@@ -9,9 +9,9 @@ export function ResidencesSection() {
     <div
       id="places"
       ref={rootRef}
-      className="w-fit max-w-full scroll-mt-page-start lg:w-globe"
+      className="mx-auto w-fit max-w-full scroll-mt-page-start lg:w-globe"
     >
-      <h3 className="flex w-fit items-center gap-tight font-mono text-xs text-muted-foreground lg:mx-auto">
+      <h3 className="mx-auto flex w-fit items-center gap-tight font-mono text-xs text-muted-foreground">
         <EarthIcon aria-hidden="true" className="size-icon-small" /> Places I’ve
         lived
       </h3>
