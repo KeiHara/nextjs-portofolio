@@ -45,7 +45,7 @@ export const profile: Profile = {
   email: "keihara453@gmail.com",
   avatar: "profile",
   about: [
-    "I joined Heidi Health before Series A as its fourth frontend engineer. I’ve helped build Scribe through Series C.",
+    "Hey, I’m Kei. I got hooked on coding as a kid: if I wanted something to exist, I could try making it. These days I’m in Sydney, figuring out how AI fits into the way I build. Spin the globe for the scenic route from Tokyo to here.",
   ],
   experience: [
     {
@@ -54,7 +54,7 @@ export const profile: Profile = {
       role: "Full-Stack Engineer",
       period: "Jun 2024 — Present",
       highlights: [
-        "Built Scribe as the engineering team grew from 20 to 144.",
+        "Joined before Series A as Heidi’s fourth frontend engineer and helped build Scribe through Series C.",
         "Led the frontend rebrand for the Series B launch.",
         "Halved load times in core clinical workflows.",
       ],
